@@ -15,6 +15,8 @@
 
                 var isNeedFoldCurrent,
                     isNeedFoldCache,
+                    isNeedFoldTopheader,
+                    isNeedFoldTopheaderCache,
                     minWindowSize = 768;
 
                 $rootScope.isAuth = AuthFactory.checkAuth('User');
@@ -22,7 +24,7 @@
 
                 }
                 $scope.isFolded = isNeedFoldCache = isNeedFoldCurrent =  $window.document.documentElement.offsetWidth < minWindowSize ? true : false;
-
+                $scope.isTopheaderFolded = isNeedFoldTopheader = isNeedFoldTopheaderCache = $window.document.documentElement.offsetWidth < minWindowSize ? true : false;
 
                 $scope.toggleNavbar = function () {
                     if(isNeedFoldCurrent) {
@@ -34,13 +36,13 @@
 
                 $window.onresize = function() {
                     isNeedFoldCurrent = $window.document.documentElement.offsetWidth < 768 ? true : false
-                    if(isNeedFoldCache !== isNeedFoldCurrent) {
+                    isNeedFoldTopheader = $window.document.documentElement.offsetWidth < 768 ? true : false;
+                    if(isNeedFoldCache !== isNeedFoldCurrent && isNeedFoldTopheaderCache !== isNeedFoldTopheader) {
                         $scope.isFolded = isNeedFoldCache = isNeedFoldCurrent;
+                        $scope.isTopheaderFolded = isNeedFoldTopheaderCache = isNeedFoldTopheader
                         $scope.$apply();
                     }
                 }
-
-
             }
         ])
 })()

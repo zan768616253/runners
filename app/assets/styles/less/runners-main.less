@@ -2,13 +2,89 @@
 @contentWhite:#e7e7e7;
 @brownness:#2C3E50;
 @normalGrey:#666;
+@lightGrey:#999;
 @ddd:#ddd;
 @white:white;
 @orangered:orangered;
 @lightseagreen:lightseagreen;
 @lightcoral:lightcoral;
 @orangered:orangered;
+@ebankinggreen:#34A344;
+
+@header-minwidth: 970px;
+
+@headerbg-image:"/assets/img/ntopbg.png";
+@headerbg-logo:"/assets/img/logo-1.png";
+@bodybg-nav:"/assets/img/nnav.png";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-style: inherit;
+}
+
+body{
+  font: 14px Lucida Sans Unicode, Myriad Pro, Hiragino Sans GB, Heiti SC, Microsoft YaHei, arial;
+  color: @contentWhite;
+  height: 100%;
+}
+
+header{
+  width: 100%;
+  height: 128px;
+  padding-top: 8px;
+  position: relative;
+  z-index: 100;
+  padding-top: 0;
+}
+
+#topheader {
+  width: 100%;
+  margin: 0 auto;
+  background: url(@headerbg-image) no-repeat center top;
+}
+
+
+
+#mainheader{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: @lightseagreen;
+}
+
+.logo-wrapper{
+  text-decoration: none;
+  margin-top: -5px;
+}
+
+.mediaLogin{
+  width: @header-minwidth;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mediaLogin a{
+  //color: @lightGrey;
+}
 
 .header-title-first{
   color: @riceWhite;
+}
+
+.header-link a{
+  color: @riceWhite;
+}
+
+.navbar{
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.navbar-toggle{
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  font-weight: bold;
 }

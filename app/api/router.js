@@ -10,6 +10,10 @@
                         url: '/main',
                         templateUrl: './views/tpl/main.html'
                     })
+                    .state('circle', {
+                        url: '/circle',
+                        templateUrl: './views/tpl/circle.html'
+                    })
 
                 $urlRouterProvider.otherwise('/main');
             }

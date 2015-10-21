@@ -26,3 +26,4 @@ module.exports = function(grunt) {
     // 默认被执行的任务列表。
     grunt.registerTask('default', ['less']);
 }
+
