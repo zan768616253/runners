@@ -25,7 +25,30 @@
 
 @media screen and (min-width:100px) and (max-width:768px){
   #mainheader{
-    min-height: 30px !important;
+    min-height: 36px !important;
   }
 
+  #mainheader, #mainheader > .container, #mainheader > .container > .navbar-header{
+    height: 36px;
+  }
+
+  #mainheader > .container > .navbar-header > a {
+    margin-top: -1px;
+    padding-top: 9px;
+    padding-bottom: 3px;
+    height: 36px;
+  }
+
+  #mainheader > .container > .navbar-header > button {
+    padding-top: 2px;
+    padding-bottom: 0;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  #homepagelink {
+    background: @riceWhite url(@headerbg-logo) no-repeat;
+    background-size: 80%;
+    width: 100px;
+  }
 }

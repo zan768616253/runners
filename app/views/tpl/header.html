@@ -12,17 +12,20 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" ng-click="isFolded=!isFolded">
-                    < >
+                    <>
                 </button>
-                <a href="" ui-sref="main" class="navbar-brand header-title">
+                <a id="homepagelink" href="" ui-sref="main" class="navbar-brand header-title">
                     <span class="header-title-first">首页</span>
                 </a>
+                <a href="" ui-sref="circle" class="navbar-brand header-title">
+                    <span class="header-title-first">约跑圈</span>
+                </a>
             </div>
-            <div class="navbar-collapse" ng-if="!isFolded" ng-click="toggleNavbar()">
-                <ul class="navbar-nav nav header-link">
-                    <li ui-sref-active="active"><a ui-sref="circle">约跑圈</a></li>
-                </ul>
-            </div>
+            <!--<div class="navbar-collapse" ng-if="!isFolded" ng-click="toggleNavbar()">-->
+                <!--<ul class="navbar-nav nav header-link">-->
+                    <!--<li ui-sref-active="active"><a ui-sref="circle">约跑圈</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
         </div>
     </nav>
 </header>
