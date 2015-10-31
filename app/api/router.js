@@ -7,27 +7,52 @@
             function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
                 var access = config_router.accessLevels;
 
+                // Public routes
                 $stateProvider
-                    .state('main', {
-                        url: '/main',
-                        templateUrl: './views/tpl/main.html',
-                        data: {
-                            //access: access.public
-                        }
-                    })
-                    .state('circle', {
-                        url: '/circle',
-                        templateUrl: './views/tpl/tpl_circle.html',
-                        data: {
-                            //access: access.public
-                        }
-                    })
-                    .state('register', {
-                        url: '/register',
-                        templateUrl: './views/tpl/tpl_register.html',
+                    .state('public', {
+                        abstract: true,
+                        template: "<ui-view/>",
                         data: {
                             access: access.public
                         }
+                    })
+                    .state('public.404', {
+                        url: '/404/',
+                        templateUrl: '404'
+                    })
+                    .state('main', {
+                        url: '/main/',
+                        templateUrl: '../views/tpl/main.html',
+                        data: {
+                            access: access.public
+                        }
+                    })
+                    .state('circle', {
+                        url: '/circle/',
+                        templateUrl: '../views/tpl/tpl_circle.html',
+                        data: {
+                            access: access.public
+                        }
+                    });
+
+                // Anonymous routes
+                $stateProvider
+                    .state('anon', {
+                        abstract: true,
+                        template: "<ui-view/>",
+                        data: {
+                            access: access.anon
+                        }
+                    })
+                    .state('anon.login', {
+                        url: '/login/',
+                        templateUrl: 'login',
+                        controller: 'LoginCtrl'
+                    })
+                    .state('anon.register', {
+                        url: '/register/',
+                        templateUrl: '../views/tpl/tpl_register.html',
+                        controller: ''
                     })
 
                 $urlRouterProvider.otherwise('/');
@@ -47,7 +72,22 @@
             function ($rootScope, $state, Auth){
                 $rootScope.$on("$stateChangeStart",
                     function(event, toState, toParams, fromState, fromParams){
+                        if(!('data' in toState) || !('access' in toState.data)){
+                            $rootScope.error = "Access undefined for this state";
+                            event.preventDefault();
+                        }else if (!Auth.authorize(toState.data.access)){
+                            $rootScope.error = "Seems like you tried accessing a route you don't have access to...";
+                            event.preventDefault();
 
+                            if(fromState.url === '^') {
+                                if(Auth.isLoggedIn()) {
+                                    $state.go('user.home');
+                                } else {
+                                    $rootScope.error = null;
+                                    $state.go('anon.login');
+                                }
+                            }
+                        }
                     }
                 )
             }
