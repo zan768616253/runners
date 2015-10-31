@@ -10,8 +10,8 @@
                 $rootScope.isSignin = false;
             }
         ])
-        .controller('NavbarController', ['$scope','$rootScope','$window','AuthFactory','HintFactory',
-            function($scope, $rootScope, $window, AuthFactory, HintFactory){
+        .controller('NavbarController', ['$scope','$rootScope','$window','Auth','HintFactory',
+            function($scope, $rootScope, $window, Auth, HintFactory){
 
                 var isNeedFoldCurrent,
                     isNeedFoldCache,
@@ -19,10 +19,6 @@
                     isNeedFoldTopheaderCache,
                     minWindowSize = 768;
 
-                $rootScope.isAuth = AuthFactory.checkAuth('User');
-                if(AuthFactory.checkAuth('User')) {
-
-                }
                 $scope.isFolded = isNeedFoldCache = isNeedFoldCurrent =  $window.document.documentElement.offsetWidth < minWindowSize ? true : false;
                 $scope.isTopheaderFolded = isNeedFoldTopheader = isNeedFoldTopheaderCache = $window.document.documentElement.offsetWidth < minWindowSize ? true : false;
 

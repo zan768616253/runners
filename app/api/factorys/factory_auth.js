@@ -3,37 +3,66 @@
  */
 (function(){
     app
-        .factory('AuthFactory', ['$http', '$cookies', '$location', '$rootScope',
-            function($http, $cookies, $location, $rootScope){
+        .factory('Auth', ['$http', '$cookieStore',
+            function($http, $cookieStore){
+
+                var accessLevels = config_router.accessLevels,
+                    userRoles = config_router.userRoles,
+                    currentUser = $cookieStore.get('user') || { username: '', role: userRoles.public };
+
+                $cookieStore.remove('user');
+
+                function changeUser(user) {
+                    angular.extend(currentUser, user);
+                }
+
                 return{
-                    login: function (data, success, error) {
-                    },
-                    signin: function (data, success, error) {
-                    },
-                    logout: function (data, success, error) {
-                    },
-                    checkAuth: function (target){
-                        if(!$cookies.getObject(target)) {
-                            return false;
+                    authorize: function(accessLevel, role){
+                        if(role === undefined) {
+                            role = currentUser.role;
                         }
-                        return true;
+                        return accessLevel.bitMask & role.bitMask;
                     },
-                    checkNotAuth: function (target) {
-                        if($cookies.getObject(target)) {
+                    isLoggedIn: function(user){
+                        if(user === undefined) {
+                            user = currentUser;
                         }
+                        return user.role.title === userRoles.user.title || user.role.title === userRoles.admin.title;
                     },
-                    setAuth: function(target, data) {
-                        $cookies.putObject(target,data);
+                    register: function(user, success, error){
+                        $http.post('/register', user).success(function(res) {
+                            changeUser(res);
+                            success();
+                        }).error(error);
                     },
-                    getAuth: function(target) {
-                        return $cookies.getObject(target)
+                    login: function(user, success, error) {
+                        $http.post('/login', user).success(function(user){
+                            changeUser(user);
+                            success(user);
+                        }).error(error);
                     },
-                    removeAuth: function(target) {
-                        $cookies.remove(target);
-                    }
+                    logout: function(success, error) {
+                        $http.post('/logout').success(function(){
+                            changeUser({
+                                username: '',
+                                role: userRoles.public
+                            });
+                            success();
+                        }).error(error);
+                    },
+                    accessLevels: accessLevels,
+                    userRoles: userRoles,
+                    user: currentUser
                 }
             }
         ])
+        .factory('Users', function($http) {
+            return {
+                getAll: function(success, error) {
+                    $http.get('/users').success(success).error(error);
+                }
+            };
+        })
         .factory('HintFactory', ['$http',
             function ($http){
                 return {
