@@ -16,11 +16,11 @@
     "html": "0.0.10",
     "lodash": "^3.6.0",
     "moment": "2.9.0",
-    "mongoose": "2.7.3",
-    "morgan": "~1.6.1",
+    "mongoose": "4.2.3",
     "node-markdown": "0.1.0",
     "nodemailer": "0.3.43",
     "passport": "^0.3.0",
+    "passport-local": "^1.0.0",
     "serve-favicon": "~2.3.0",
     "utility": "1.0.0",
     "validator": "0.3.7"

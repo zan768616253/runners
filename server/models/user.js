@@ -1,7 +1,9 @@
 var _ = require('lodash');
 var passport = require('passport');
-var userRoles = require('../routes/config_router').userRoles;
+var check = require('validator').check;
 var mongoose = require('../config.js').mongoose;
+var userRoles = require('../routes/config_router').userRoles;
+
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
@@ -38,7 +40,6 @@ var UserSchema = new Schema({
     retrieve_key : {type: String}
 });
 
-UserSchema.virtual('avatar_url').get(function () {
-});
+var User = mongoose.model('User', UserSchema);
 
-mongoose.model('User', UserSchema);
+module.exports = User;
