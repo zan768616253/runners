@@ -1,12 +1,13 @@
 var _ = require('lodash');
-var passport = require('passport');
 var check = require('validator').check;
-var mongoose = require('../config.js').mongoose;
-var userRoles = require('../routes/config_router').userRoles;
+
+var mongoose = require('../configs/config.js').mongoose;
+var userRoles = require('../configs/config_router').userRoles;
 
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
+    id: { type: String, index: true },
     name: { type: String, index: true },
     loginname: { type: String, unique: true },
     pass: { type: String },
@@ -39,6 +40,25 @@ var UserSchema = new Schema({
     retrieve_time : {type: Number},
     retrieve_key : {type: String}
 });
+
+UserSchema.statics.authenticate = function(email, password, callback){
+    this.findOne({ email: email }).select('password')
+        .exec(function(err, user){
+            if (err) {
+                return callback(err, null);
+            }
+            if(!user){
+                return callback(err, user);
+            }
+
+            if(password == user.pass){
+                user.pass = undefined;
+                callback(err, user);
+            }else{
+                return callback(err, null);
+            }
+        })
+}
 
 var User = mongoose.model('User', UserSchema);
 

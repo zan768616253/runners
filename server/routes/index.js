@@ -1,9 +1,7 @@
 var express = require('express');
+var auth = require('../controllers/authentication.js');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.sendFile('app/index.html');
-});
+module.exports = function (app, passport){
 
-module.exports = router;
+};

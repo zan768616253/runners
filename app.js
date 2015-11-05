@@ -3,10 +3,15 @@ var session = require('express-session');
 var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var cookieSession = require('cookie-session');
 var bodyParser = require('body-parser');
 var passport = require('passport');
+var mongoStore = require('connect-mongo')(session);
+var flash = require('connect-flash');
 
 var routes = require('./server/routes/index.js');
+var config = require('./server/configs/config.js');
+var config_passport = require('./server/configs/config_passport.js');
 var User = require('./server/models/user.js');
 
 var app = express();
@@ -16,11 +21,31 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cookieSession({ secret: 'secret' }));
+
+app.use(session({
+    resave: true,
+    saveUninitialized: true,
+    secret: 'secret',
+    store: new mongoStore({
+        url: config.db,
+        collection : 'sessions'
+    })
+}));
+
+app.use(require('express-session')({
+    secret: 'runners-secret',
+    resave: false,
+    saveUninitialized: false
+}));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(express.static("app"));
-app.use("/bower_components",express.static(path.join(__dirname, 'bower_components')));
-app.use('/', routes);
+app.use("/bower_components", express.static(path.join(__dirname, 'bower_components')));
+
+config_passport(passport);
+routes(app, passport);
 
 module.exports = app;
