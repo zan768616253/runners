@@ -1,0 +1,32 @@
+<div id="tpl_register" clas="container w-xxl w-auto-xs" ng-controller="SignUpController as ctrl">
+    <form name="ctrl.signupForm" ng-submit="ctrl.signup()" novalidate>
+        <div class="signup-holdspace"></div>
+        <div class="signup-wrapper">
+            <div class="signup-top">
+                <div class="signup-logo">
+                    <a href="" ui-sref="main">
+                        <img src="/assets/img/logo-1.png" alt="Logo"/>
+                    </a>
+                </div>
+            </div>
+            <div class="signup-main">
+                <div class="signup-fieldtr form-group" ng-class="{'has-error':ctrl.hasErrorClass('email')}">
+                    <div class="signup-fieldtd">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="signup-fieldtd">
+                        <input id="email" name="email" class="form-control" type="email" required
+                               ng-model="ctrl.newCustomer.email" ng-model-options="{ updateOn : 'default blur' }"
+                               ng-focus="ctrl.toggleEmailPrompt(true)" ng-blur="ctrl.toggleEmailPrompt(false)"/>
+                        <div class="Validform_checktip prompt message-animation" ng-if="ctrl.showEmailPrompt && !ctrl.showEmailError">只能使用邮箱或者手机号</div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+    </form>
+</div>

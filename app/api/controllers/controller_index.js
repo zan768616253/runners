@@ -19,6 +19,10 @@
                     isNeedFoldTopheaderCache,
                     minWindowSize = 768;
 
+                var isAuth = false;
+
+                $scope.isAuth = isAuth;
+
                 $scope.isFolded = isNeedFoldCache = isNeedFoldCurrent =  $window.document.documentElement.offsetWidth < minWindowSize ? true : false;
                 $scope.isTopheaderFolded = isNeedFoldTopheader = isNeedFoldTopheaderCache = $window.document.documentElement.offsetWidth < minWindowSize ? true : false;
 

@@ -1,10 +1,17 @@
 <header ng-controller="NavbarController">
-    <div id="topheader" ng-if="!isTopheaderFolded">
+    <div id="topheader">
         <div class="mediaLogin">
             <div class="logo-wrapper">
-                <a href="" ui-sref="main" title="This a website for runners get together">
+                <a href="" ui-sref="main" title="This a website for runners get together" class="ml1">
                     <img ng-src="/assets/img/logo-1.png">
                 </a>
+                <div class="ml2-div" ng-if="!isAuth">
+                    <a href="" class="ml2" ng-click="login()">登陆</a>
+                    <a href="" class="ml2" ui-sref="register">注册</a>
+                </div>
+                <div class="ml2-div" ng-if="isAuth">
+
+                </div>
             </div>
         </div>
     </div>
@@ -21,11 +28,6 @@
                     <span class="header-title-first">约跑圈</span>
                 </a>
             </div>
-            <!--<div class="navbar-collapse" ng-if="!isFolded" ng-click="toggleNavbar()">-->
-                <!--<ul class="navbar-nav nav header-link">-->
-                    <!--<li ui-sref-active="active"><a ui-sref="circle">约跑圈</a></li>-->
-                <!--</ul>-->
-            <!--</div>-->
         </div>
     </nav>
 </header>

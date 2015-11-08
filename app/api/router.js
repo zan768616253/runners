@@ -33,27 +33,14 @@
                         data: {
                             access: access.public
                         }
-                    });
-
-                // Anonymous routes
-                $stateProvider
-                    .state('anon', {
-                        abstract: true,
-                        template: "<ui-view/>",
-                        data: {
-                            access: access.anon
-                        }
                     })
-                    .state('anon.login', {
-                        url: '/login/',
-                        templateUrl: 'login',
-                        controller: 'LoginCtrl'
-                    })
-                    .state('anon.register', {
+                    .state('register', {
                         url: '/register/',
                         templateUrl: '../views/tpl/tpl_register.html',
-                        controller: ''
-                    })
+                        data: {
+                            access: access.public
+                        }
+                    });
 
                 $urlRouterProvider.otherwise('/');
 

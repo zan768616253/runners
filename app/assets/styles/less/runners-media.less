@@ -10,16 +10,87 @@
 @lightcoral:lightcoral;
 @orangered:orangered;
 @ebankinggreen:#34A344;
-
-@header-minwidth: 970px;
+@runnergreen:#82b54b;
 
 @headerbg-image:"/assets/img/ntopbg.png";
+@bg-image:"/assets/img/bg.jpg";
 @headerbg-logo:"/assets/img/logo-1.png";
 @bodybg-nav:"/assets/img/nnav.png";
 
 @media  screen and (min-width:768px) {
   #mainheader .container{
-    width: @header-minwidth;
+    width: 85%;
+  }
+  .mediaLogin{
+    width: 100%;
+  }
+  .ml2-div{
+    padding-top: 7px;
+    float: right;
+  }
+  .signup-wrapper{
+    width: 768px;
+    border-radius: 5px;
+    background-color: @riceWhite;
+    padding: 0 57px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .signup-logo{
+    float: left;
+    margin: 25px 0 0 10px;
+  }
+  .signup-holdspace{
+    height: 56px;
+  }
+
+  .signup-top{
+    position: relative;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+    display: inline-block;
+    border-bottom: 2px solid @runnergreen;
+  }
+
+  .signup-fieldblock{
+    display: inline-block;
+    width: 100%;
+  }
+
+  .signup-fieldtd{
+    line-height: 35px;
+    float: left;
+    display: block;
+  }
+
+  .signup-fieldtd:first-child{
+    width: 220px;
+    text-align: right;
+  }
+
+  .signup-fieldtd label{
+    font-size: 14px;
+    color: #7c8f7a;
+    padding-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .Validform_checktip {
+    color: #595959;
+    display: inline;
+    padding-left: 6px;
+    position: relative;
+  }
+
+  .signup-fieldtd input {
+    width: 200px;
+    display: inline-block;
+  }
+
+  .signup-main{
+    padding-top: 40px;
   }
 }
 
@@ -33,7 +104,7 @@
   }
 
   #mainheader > .container > .navbar-header > a {
-    margin-top: -1px
+    margin-top: -1px;
     padding-top: 9px;
     padding-bottom: 3px;
     height: 36px;
@@ -50,5 +121,47 @@
     background: @riceWhite url(@headerbg-logo) no-repeat;
     background-size: 80%;
     width: 100px;
+  }
+
+  .mediaLogin{
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #bdc1c4;
+    height: 38px;
+    width: 100%;
+    background-image: -webkit-linear-gradient( 90deg, rgb(241,241,241) 0%, rgb(252,253,255) 100%);
+  }
+
+  .ml1{
+    display: none;
+  }
+
+  .ml2-div{
+    padding-top: 5px;
+  }
+
+  .ml2{
+    width: 49.5%;
+    float: left;
+    border-right: 1px solid #bdc1c4;
+    text-align: center;
+    line-height: 38px;
+    color: #797979;
+    position: relative;
+    padding: 0;
+  }
+
+  .signup-wrapper{
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .Validform_checktip{
+    display: none;
+  }
+
+  .signup-wrapper input[text]{
+    width: 100%;
   }
 }

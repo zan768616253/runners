@@ -1,7 +1,8 @@
 /**
  * Created by zan on 10/18/15.
  */
-var app = angular.module("app", ['ui.router','ngCookies','ngSanitize']);
+var app = angular.module("app", ['ui.router','ngAnimate','ngAria',
+                                'ngMessages','ngCookies','ngSanitize']);
 
 app.run(['$templateCache', function ($templateCache) {
     $templateCache.put('header.html','./views/tpl/header.html');

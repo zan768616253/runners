@@ -1,3 +1,7 @@
+a:link,
+a:visited {
+  text-decoration: none;
+}
 html,
 body,
 div,
@@ -68,7 +72,6 @@ body {
 }
 header {
   width: 100%;
-  height: 128px;
   padding-top: 8px;
   position: relative;
   z-index: 100;
@@ -83,12 +86,13 @@ header {
   margin-left: auto;
   margin-right: auto;
   background-color: lightseagreen;
+  margin-bottom: 0;
 }
 .logo-wrapper {
   text-decoration: none;
   margin-top: -5px;
 }
-.mediaLogin {
+.mainheader {
   width: 970px;
   margin-left: auto;
   margin-right: auto;
@@ -108,4 +112,42 @@ header {
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   font-weight: bold;
+}
+.ml2 {
+  line-height: 54px;
+  padding: 0px 5px 0 4px;
+  color: #990000;
+  font-size: 14px;
+}
+.main {
+  padding-top: 0;
+}
+#tpl_register {
+  background: url("/assets/img/bg.jpg") no-repeat center top;
+  height: 768px;
+}
+.signup-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.signup-wrapper .alert {
+  margin-top: 10px;
+}
+.signup-wrapper label {
+  color: #595959;
+  font-weight: 500;
+  display: block;
+  padding-bottom: .4em;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 15px;
+  line-height: 18px;
+}
+.signup-fieldtr {
+  display: inline-block;
+  width: 100%;
+}
+.message-animation {
+  transition: 0.2s ease-in-out all;
 }
