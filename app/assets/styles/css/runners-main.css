@@ -149,5 +149,5 @@ header {
   width: 100%;
 }
 .message-animation {
-  transition: 0.2s ease-in-out all;
+  color: red;
 }

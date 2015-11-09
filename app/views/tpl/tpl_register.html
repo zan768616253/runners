@@ -16,17 +16,88 @@
                     </div>
                     <div class="signup-fieldtd">
                         <input id="email" name="email" class="form-control" type="email" required
-                               ng-model="ctrl.newCustomer.email" ng-model-options="{ updateOn : 'default blur' }"
+                               ng-model="ctrl.newUser.email" ng-model-options="{ updateOn : 'default blur' }"
                                ng-focus="ctrl.toggleEmailPrompt(true)" ng-blur="ctrl.toggleEmailPrompt(false)"/>
-                        <div class="Validform_checktip prompt message-animation" ng-if="ctrl.showEmailPrompt && !ctrl.showEmailError">只能使用邮箱或者手机号</div>
+                        <!--<div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.email.$valid" ng-if="ctrl.showEmailPrompt && !ctrl.showEmailError">只能使用邮箱或者手机号</div>-->
+                        <div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.email.$error" ng-if="ctrl.showMessages('email')">
+                            <div class="message-animation" ng-message="required">
+                                <strong>This field is required.</strong>
+                            </div>
+                            <div class="message-animation" ng-message="email">
+                                <strong>Please format your email correctly.</strong>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
+                <div class="signup-fieldtr form-group" ng-class="{'has-error':ctrl.hasErrorClass('userName')}">
+                    <div class="signup-fieldtd">
+                        <label for="userName">约跑昵称</label>
+                    </div>
+                    <div class="signup-fieldtd">
+                        <input id="userName" name="userName" class="form-control" type="text" required
+                               ng-model="ctrl.newUser.userName" ng-model-options="{ updateOn : 'default blur' }"
+                               ng-focus="ctrl.toggleUsernamePrompt(true)" ng-blur="ctrl.toggleUsernamePrompt(false)"/>
+                        <!--<div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.userName.$valid" ng-if="ctrl.showUsernamePrompt && !ctrl.showUsernameError">username</div>-->
+                        <div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.userName.$error"  ng-if="ctrl.showMessages('userName')">
+                            <div class="message-animation" ng-message="required">
+                                <strong>This field is required.</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="signup-fieldtr form-group" ng-class="{'has-error':ctrl.hasErrorClass('password')}">
+                    <div class="signup-fieldtd">
+                        <label for="password">密码</label>
+                    </div>
+                    <div class="control-group">
+                        <div class="input-group">
+                            <input id="password" name="password" class="form-control" required type="{{ctrl.getPasswordType()}}"
+                                   ng-model="ctrl.newUser.password" ng-model-options="{ updateOn : 'default blur' }"
+                                   validate-password-characters/>
+                        <span class="input-group-addon">
+                            <input type="checkbox" ng-model="ctrl.signupForm.showPassword"> 显示
+                        </span>
+                        </div>
+                    </div>
+                    <div class="control-group signup-fieldtd">
+                        <div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.password.$error"  ng-if="ctrl.showMessages('password')">
+                            <div class="message-animation" ng-message="required">
+                                <strong>This field is required.</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signup-fieldtr form-group" ng-class="{'has-error':ctrl.hasErrorClass('passwordConfirmed')}">
+                    <div class="signup-fieldtd">
+                        <label for="passwordConfirmed">确认密码</label>
+                    </div>
+                    <div class="control-group">
+                        <div class="input-group">
+                            <input id="passwordConfirmed" name="passwordConfirmed" class="form-control" required type="{{ctrl.getPasswordType()}}"
+                                   ng-model="ctrl.newUser.passwordConfirmed" ng-model-options="{ updateOn : 'default blur' }"
+                                   validate-password-characters/>
+                        <span class="input-group-addon">
+                            <input type="checkbox" ng-model="ctrl.signupForm.showPasswordConfirmed"> 显示
+                        </span>
+                        </div>
+                    </div>
+                    <div class="control-group signup-fieldtd">
+                        <div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.passwordConfirmed.$error"  ng-if="ctrl.showMessages('passwordConfirmed')">
+                            <div class="message-animation" ng-message="required">
+                                <strong>This field is required.</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signup-submittr">
+                    <button class="btn btn-primary" type="submit">注册我的账户</button>
+                </div>
 
             </div>
-
-
         </div>
     </form>
 </div>

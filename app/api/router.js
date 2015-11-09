@@ -36,6 +36,7 @@
                     })
                     .state('register', {
                         url: '/register/',
+                        //controller: 'SignUpController',
                         templateUrl: '../views/tpl/tpl_register.html',
                         data: {
                             access: access.public
