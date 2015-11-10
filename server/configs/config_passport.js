@@ -16,18 +16,18 @@ module.exports = function(passport){
     passport.use(local);
 }
 
-var local = new LocalStrategy({
+var local = new LocalStrategy('local-signin', {
         usernameField: 'email',
         passwordField: 'pass'
     }, function(email, pass, done){
         User.authenticate(email, password, function(err, user){
             if (err) {
-                return done(err);
+                return done(err, null, { message: 'login error.' });
             }
             if (!user) {
                 return done(null, false, { message: 'Invalid email or password.' });
             }
-            return done(null, user);
+            return done(null, user, { message: 'login successfully.' });
         });
     }
  );

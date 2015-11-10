@@ -1,8 +1,9 @@
 var flash = require('../helpers/helper_flash.js');
 
-exports.requiresLogin = function (req, res, next) {
-    if (req.isAuthenticated()) return next()
-    if (req.method == 'GET') req.session.returnTo = req.originalUrl
+function ensureAuthenticated(req, res, next){
+    if (req.isAuthenticated()) return next();
     return res.send(401, 'login needed' ,null);
 }
+
+exports.ensureAuthenticated = ensureAuthenticated;
 

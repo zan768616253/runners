@@ -1,5 +1,4 @@
-var models = require('../models');
-var User = models.User;
+var User = require('../models/user.js');
 
 exports.getUsersByNames = function(names, callback){
     if (names.length === 0) {
@@ -46,4 +45,5 @@ exports.newAndSave = function (name, loginname, pass, email, avatar_url, active,
     user.active = false;
     user.save(callback);
 };
+
 
