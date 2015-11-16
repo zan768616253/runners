@@ -6,13 +6,12 @@ var cookieParser = require('cookie-parser');
 var cookieSession = require('cookie-session');
 var bodyParser = require('body-parser');
 var passport = require('passport');
+var mongoose = require('mongoose');
 var mongoStore = require('connect-mongo')(session);
-var flash = require('connect-flash');
 
-var routes = require('./server/routes/index.js');
-var config = require('./server/configs/config.js');
-var config_passport = require('./server/configs/config_passport.js');
-var User = require('./server/models/user.js');
+var routes = require('./server/routes/index');
+var config = require('./server/configs/config');
+var config_passport = require('./server/configs/config_passport');
 
 var app = express();
 

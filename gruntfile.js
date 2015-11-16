@@ -1,6 +1,3 @@
-/**
- * Created by zan on 10/18/15.
- */
 'use strict';
 
 module.exports = function(grunt) {
