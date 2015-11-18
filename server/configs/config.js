@@ -5,6 +5,7 @@ var config = {
     name: 'runner-club',
     db: 'mongodb://127.0.0.1/runners-dev',
     auth: {
+        issuer : 'runners',
         expiration : 30 * 60 * 1000,
         token_secret : 'runners-secret'
     },
