@@ -8,6 +8,10 @@ var passport = require('passport');
 var routes = require('./server/routes/index');
 var config = require('./server/configs/config');
 var config_passport = require('./server/configs/config_passport');
+var helpers = require('./server/helpers');
+
+var TokenExtractor = helpers.TokenExtractor;
+
 
 var app = express();
 
@@ -19,10 +23,12 @@ app.use(cookieParser());
 
 app.use(passport.initialize());
 
-app.use(express.static("app"));
+app.use(express.static(path.join(__dirname, config.client.root)));
 app.use("/bower_components", express.static(path.join(__dirname, 'bower_components')));
 
 config_passport(passport);
 routes(app, passport);
+
+app.use(TokenExtractor);
 
 module.exports = app;

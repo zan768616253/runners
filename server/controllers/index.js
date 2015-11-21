@@ -1,0 +1,1 @@
+exports.Sign = require('./sign');

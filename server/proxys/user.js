@@ -37,6 +37,14 @@ exports.getUserByNameAndKey = function (loginname, key, callback) {
     User.findOne({loginname: loginname, retrieve_key: key}, callback);
 };
 
+exports.removeAsync = function(callback){
+    User.find({}).remove(callback);
+};
+
+exports.registerAsync = function(email, pass, callback){
+    this.newAndSave(null, email, pass, email, null, true, callback);
+};
+
 exports.newAndSave = function (name, loginname, pass, email, avatar_url, active, callback) {
     var user         = new User();
     user.name        = loginname;

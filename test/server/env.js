@@ -1,13 +1,21 @@
 'use strict';
 
-var config = require('../server/configs/config');
 var mongoose = require('mongoose');
+
+var config = require('../../server/configs/config');
+var User = require('../../server/proxys').User;
+var UserSeed = require('../../seeds').User;
+
+var usersToSeed = 1;
 
 beforeEach(function (done) {
     function clearDB() {
         for (var i in mongoose.connection.collections) {
             mongoose.connection.collections[i].remove(function() {});
         }
+
+        //UserSeed.seed(usersToSeed);
+
         return done();
     }
 

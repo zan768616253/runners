@@ -3,8 +3,8 @@ process.env.NODE_ENV = 'test';
 var request = require('supertest');
 var should = require('should');
 
-var app = require('../app');
-var config = require('../server/configs/config');
+var app = require('../../../runners/app');
+var config = require('../../server/configs/config');
 
 describe('test/app.test.js', function (){
     it('should / status 200', function (done){

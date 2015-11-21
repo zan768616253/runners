@@ -5,27 +5,75 @@ var validator = require('validator');
 var eventproxy = require('eventproxy');
 var utility = require('utility');
 
+var JWTRedisService = require('../services/service_jwt');
 var config = require('../configs/config');
-var User = require('../proxys/user');
-var flash = require('../helpers/helper_flash');
-var mail = require('../helpers/helper_mail');
-var tools = require('../helpers/helper_tools');
+var proxys = require('../proxys');
+var helpers = require('../helpers');
+var User = proxys.User;
+var flash = helpers.Flash;
+var mail = helpers.Mail;
+var tools = helpers.Tools;
+var jwtRedisService = new JWTRedisService({
+    host       : config.redis.host,
+    port       : config.redis.port,
+    pass       : config.redis.pass,
+    keyspace   : config.redis.keyspace,
+    issuer     : config.auth.issuer,
+    secret     : config.auth.token_secret,
+    expiration : config.auth.expiration
+});
 
 function signin(req, res, next){
+    var user = req.user.toJSON();
     passport.authenticate('local-signin', function(err, user, info){
-        if (err || !user) {
+        if (err) {
             res.status(500);
-            return res.send(flash(500, info ,null));
+            return res.send(flash(500, err ,null));
         }
 
-        req.logIn(user, function(err){
+        if (!user){
+            res.status(401);
+            return res.send(flash(401, 'Unauthorized' ,null));
+        }
+
+        req.logIn(user, { session: false }, function(err){
             if (err) {
-                return next(err);
+                res.status(500);
+                return res.send(flash(500, err ,null));
             }
-            res.status(200);
-            return res.send(flash(200, "loged in", null));
+
+            return jwtRedisService.sign(user).then(function(token){
+                if (!token){
+                    res.status(500);
+                    return res.send(flash(500, "Authentication Interbale Err!", null));
+                }
+
+                res.status(200);
+                res.send(flash(200, "Authentication successful!", {
+                    token   : token,
+                    user    : user
+                }));
+            })
+        });
+    });
+}
+
+function signout(req, res, next){
+    if (!req.token){
+        res.status(200);
+        return res.send(flash(200, "Not loged in", null));
+    }
+
+    return jwtRedisService.expire(req.token)
+        .then(function(reply){
+            delete req.token;
+            delete req.session;
+            delete req.user;
         })
-    })(req, res, next);
+        .then(function(){
+            res.status(200);
+            return res.send(flash(200, "Loged out", null));
+        })
 }
 
 function signup(req, res, next){
@@ -74,12 +122,6 @@ function signup(req, res, next){
             return res.send(flash(200, '欢迎加入 ' + config.name + '！我们已给您的注册邮箱发送了一封邮件，请点击里面的链接来激活您的帐号。', null));
         });
     });
-}
-
-function signout(req, res, next){
-    req.logout();
-    res.status(200);
-    return res.send(flash(200, '！用户已登出', null));
 }
 
 function activeAccount(req, res, next){

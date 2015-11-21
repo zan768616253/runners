@@ -1,6 +1,6 @@
 var should = require('should');
 
-var models = require('../../server/models');
+var models = require('../../../server/models');
 var User = models.User;
 
 describe('test/models/user.test.js', function () {

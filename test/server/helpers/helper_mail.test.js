@@ -1,4 +1,4 @@
-var mail = require('../../server/helpers/helper_mail');
+var mail = require('../../../server/helpers/helper_mail');
 
 describe('test/helpers/helper_mail.test.js', function(){
     describe('sendActiveMail', function(){
