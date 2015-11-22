@@ -4,8 +4,6 @@ var _        = require('lodash');
 var expect   = require('should').expect;
 var mongoose = require('mongoose');
 
-var DEFAULT_SEEDING_TIMEOUT_PER_DOCUMENT = 1000;
-
 exports.prepareSeededObjects = function(seeded, paths,sortBy ){
     var op = _(seeded)
         .map(function(item){

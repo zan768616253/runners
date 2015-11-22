@@ -1,4 +1,5 @@
 'use strict';
+require('../server/app')
 
 var _ = require('lodash');
 var BB = require('bluebird');
@@ -11,16 +12,8 @@ var PASSWORD = 'test';
 module.exports = {
     seed: function(n){
         return BB.all(_.times(n, function(i){
-
-            var user = new User({
-                email: chance.email({ domain: 'test.com' })
-            });
-
-            return User.registerAsync(user, PASSWORD)
-                .then(function(user){
-                    Log.info(user.email + ' added with password: "' + PASSWORD + '".');
-                    return user;
-                });
+            var email = chance.email({ domain: 'test.com' });
+            User.registerAsync(email, PASSWORD);
         }));
     }
 

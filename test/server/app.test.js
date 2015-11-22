@@ -1,14 +1,14 @@
 process.env.NODE_ENV = 'test';
 
-var request = require('supertest');
-var should = require('should');
-
-var app = require('../../../runners/app');
+var app = require('../../server/app');
 var config = require('../../server/configs/config');
+
+var request = require('supertest')(app);
+var should = require('should');
 
 describe('test/app.test.js', function (){
     it('should / status 200', function (done){
-        request(app).get('/').end(function (err, res){
+        request.get('/').end(function (err, res){
                 res.status.should.equal(200);
                 done();
             }

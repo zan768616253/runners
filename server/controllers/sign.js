@@ -24,38 +24,55 @@ var jwtRedisService = new JWTRedisService({
 });
 
 function signin(req, res, next){
-    var user = req.user.toJSON();
-    passport.authenticate('local-signin', function(err, user, info){
-        if (err) {
-            res.status(500);
-            return res.send(flash(500, err ,null));
-        }
+    var email = validator.trim(req.body.email).toLowerCase();
+    var password = validator.trim(req.body.password);
+    if(email && password) {
+        req.user = {
+            email     : email,
+            password  : password
+        };
 
-        if (!user){
-            res.status(401);
-            return res.send(flash(401, 'Unauthorized' ,null));
-        }
+        req.email = email;
+        req.password = password;
 
-        req.logIn(user, { session: false }, function(err){
+        passport.authenticate('local', function(err, user, info){
             if (err) {
                 res.status(500);
                 return res.send(flash(500, err ,null));
             }
 
-            return jwtRedisService.sign(user).then(function(token){
-                if (!token){
+            if (!user){
+                res.status(401);
+                return res.send(flash(401, 'Unauthorized' ,null));
+            }
+
+            req.logIn(user, { session: false }, function(err){
+                if (err) {
                     res.status(500);
-                    return res.send(flash(500, "Authentication Interbale Err!", null));
+                    return res.send(flash(500, err ,null));
                 }
 
-                res.status(200);
-                res.send(flash(200, "Authentication successful!", {
-                    token   : token,
-                    user    : user
-                }));
-            })
+                return jwtRedisService.sign(user).then(function(token){
+                    if (!token){
+                        res.status(500);
+                        return res.send(flash(500, "Authentication Interbale Err!", null));
+                    }
+
+                    res.status(200);
+                    res.send(flash(200, "Authentication successful!", {
+                        token   : token,
+                        user    : user
+                    }));
+                })
+            });
         });
-    });
+
+        //res.status(401);
+        //return res.send(flash(401, 'Unauthorized' ,null));
+    } else{
+        res.status(401);
+        return res.send(flash(401, 'Not enough information to log in' ,null));
+    }
 }
 
 function signout(req, res, next){

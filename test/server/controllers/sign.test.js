@@ -1,15 +1,13 @@
-var app = require('../../../../runners/app');
+var app = require('../../../server/app');
 var request = require('supertest')(app);
 var agent = require('supertest').agent(app);
 var should = require('should');
 var utility = require('utility');
 var pedding = require('pedding');
-var mm = require('mm');
 
 var config = require('../../../server/configs/config');
 var UserProxy = require('../../../server/proxys').User;
 var SuperAgentUtils = require('../superagent_utils');
-var UserSeed = require('../../../../runners/seeds/user');
 
 var agentUtils = new SuperAgentUtils(agent);
 
@@ -30,14 +28,8 @@ describe('test/controllers/sign.test.js', function (){
                 .then(agentUtils.saveJWT.bind(agentUtils));
         };
 
-        afterEach(function () {
-            mm.restore();
-        });
-
         describe('sign up', function () {
             it('should sign up a user', function (done) {
-                done = pedding(done, 1);
-
                 request.post('/signup')
                     .send({
                         loginname: loginname,
@@ -65,7 +57,33 @@ describe('test/controllers/sign.test.js', function (){
                         re_pass: pass,
                     })
                     .expect(422, done);
-            })
+            });
+        });
+
+        describe('sign in', function (){
+            it('should respond 401 (invalid credentials)', function(done){
+                request.post('/signin')
+                    .send({
+                        email: email,
+                        password: pass,
+                    })
+                    .expect(401, function(err, res){
+                        should.not.exists(err);
+                        res.body.should.not.be.empty;
+                        res.body.status.message.should.equal('Unauthorized');
+                        done();
+                    })
+            });
+
+            it('should respond 401 (missing credentials)', function(done){
+                request.post('/signin')
+                    .expect(401, function(err, res){
+                        should.not.exists(err);
+                        res.body.should.not.be.empty;
+                        res.body.status.message.should.equal('Not enough information to log in');
+                        done();
+                    });
+            });
         });
     }
 );

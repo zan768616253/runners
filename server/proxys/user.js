@@ -2,6 +2,7 @@ var models = require('../models');
 var User = models.User;
 var utility = require('utility');
 var uuid = require('node-uuid');
+var BB = require('bluebird');
 
 exports.getUsersByNames = function (names, callback) {
     if (names.length === 0) {
@@ -41,8 +42,21 @@ exports.removeAsync = function(callback){
     User.find({}).remove(callback);
 };
 
-exports.registerAsync = function(email, pass, callback){
-    this.newAndSave(null, email, pass, email, null, true, callback);
+exports.registerAsync = function(email, pass){
+    var user         = new User();
+    user.name        = email;
+    user.loginname   = email;
+    user.pass        = pass;
+    user.email       = email;
+    user.active      = true;
+    user.accessToken = uuid.v4();
+
+    user.save(function(err){
+        if(err){
+            return null;
+        }
+        return user;
+    });
 };
 
 exports.newAndSave = function (name, loginname, pass, email, avatar_url, active, callback) {

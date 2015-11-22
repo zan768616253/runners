@@ -16,10 +16,10 @@ module.exports = function(passport){
     passport.use(local);
 }
 
-var local = new LocalStrategy('local-signin', {
-        usernameField: 'email',
-        passwordField: 'pass'
-    }, function(email, pass, done){
+var local = new LocalStrategy({ usernameField: 'email', passwordField : 'password' },
+    function(email, password, done){
+        console.log('LocalStrategy is called');
+
         User.authenticate(email, password, function(err, user){
             if (err) {
                 return done(err, null, { message: 'login error.' });

@@ -5,13 +5,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 
-var routes = require('./server/routes/index');
-var config = require('./server/configs/config');
-var config_passport = require('./server/configs/config_passport');
-var helpers = require('./server/helpers');
+var routes = require('./routes/index');
+var config = require('./configs/config');
+var config_passport = require('./configs/config_passport');
+var helpers = require('./helpers/index');
 
 var TokenExtractor = helpers.TokenExtractor;
-
 
 var app = express();
 
@@ -24,7 +23,8 @@ app.use(cookieParser());
 app.use(passport.initialize());
 
 app.use(express.static(path.join(__dirname, config.client.root)));
-app.use("/bower_components", express.static(path.join(__dirname, 'bower_components')));
+console.log(path.join(__dirname, config.client.root));
+app.use("/bower_components", express.static(path.join(__dirname, config.client.bower)));
 
 config_passport(passport);
 routes(app, passport);

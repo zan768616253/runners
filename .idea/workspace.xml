@@ -2,250 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f7165be-e21d-479d-83e6-8aa82bafd37f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/helpers/helper_log.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/helpers/helper_response.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/helpers/helper_tokenextractor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seeds/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/controllers/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/helpers/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/server/superagent_utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seeds/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/utils.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/lodash/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayMax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayMin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/charAtCallback.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/extremumBy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/shimIsPlainObject.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/configs/config_express.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/app.test.js" afterPath="$PROJECT_DIR$/test/server/app.test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/controllers/sign.test.js" afterPath="$PROJECT_DIR$/test/server/controllers/sign.test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/env.js" afterPath="$PROJECT_DIR$/test/server/env.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/helpers/helper_mail.test.js" afterPath="$PROJECT_DIR$/test/server/helpers/helper_mail.test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/models/user.test.js" afterPath="$PROJECT_DIR$/test/server/models/user.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/LazyWrapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/LazyWrapper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/README.md" afterPath="$PROJECT_DIR$/node_modules/lodash/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/SetCache.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/SetCache.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math/add.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math/add.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/after.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/after.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arraySum.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arraySum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/ary.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/ary.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/assign.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/assign.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/assignDefaults.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/assignDefaults.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/assignOwnDefaults.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/assignOwnDefaults.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/at.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/at.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/attempt.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/attempt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/middlewares/authorization.js" afterPath="$PROJECT_DIR$/server/middlewares/authorization.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseAssign.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseAssign.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseAt.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseAt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseCallback.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseCallback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseClone.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseClone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseCompareAscending.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseCompareAscending.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseCopy.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseCopy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseCreate.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseCreate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseDifference.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseDifference.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseFill.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseFill.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseFlatten.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseFlatten.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseFor.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseFor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsEqual.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsEqual.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsEqualDeep.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsEqualDeep.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsMatch.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsMatch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseMap.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseMap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseMatches.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseMatches.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseMatchesProperty.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseMatchesProperty.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseMerge.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseMerge.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseMergeDeep.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseMergeDeep.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseProperty.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseProperty.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseRandom.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseRandom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseSlice.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseSlice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseSortByOrder.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseSortByOrder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseToString.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseToString.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseUniq.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseUniq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseValues.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseValues.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseWrapperValue.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseWrapperValue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/before.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/before.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/binaryIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/binaryIndex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/binaryIndexBy.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/binaryIndexBy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/bind.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/bind.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/bindAll.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/bindAll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/bindCallback.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/bindCallback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/bindKey.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/bindKey.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/bufferClone.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/bufferClone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/callback.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/callback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/chunk.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/chunk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/clone.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/clone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/cloneDeep.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/cloneDeep.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/compareAscending.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/compareAscending.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/compareMultiple.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/compareMultiple.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/composeArgs.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/composeArgs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/composeArgsRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/composeArgsRight.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/server/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/utils.js" afterPath="$PROJECT_DIR$/test/server/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/server/app.test.js" afterPath="$PROJECT_DIR$/test/server/app.test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/configs/config.js" afterPath="$PROJECT_DIR$/server/configs/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/create.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/create.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createAggregator.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createAggregator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createAssigner.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createAssigner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createBaseEach.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createBaseEach.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createCache.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createCache.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createCtorWrapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createCtorWrapper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createCurry.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createCurry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createExtremum.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createExtremum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createFind.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createFind.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createFlow.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createFlow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createForEach.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createForEach.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createForIn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createForIn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createForOwn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createForOwn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createHybridWrapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createHybridWrapper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createPadDir.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createPadDir.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createPadding.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createPadding.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createPartial.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createPartial.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createPartialWrapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createPartialWrapper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createReduce.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createReduce.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createWrapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createWrapper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/curry.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/curry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/curryRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/curryRight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/debounce.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/debounce.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/deburr.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/deburr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/defaults.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/defaults.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/defer.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/defer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/delay.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/delay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/difference.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/difference.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/endsWith.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/endsWith.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/equalArrays.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/equalArrays.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/equalByTag.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/equalByTag.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/equalObjects.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/equalObjects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/escape.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/escape.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/escapeRegExp.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/escapeRegExp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/escapeStringChar.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/escapeStringChar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/every.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/every.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/flatten.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/flatten.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/forEach.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/forEach.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/forIn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/forIn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/forOwn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/forOwn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/getFuncName.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/getFuncName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/getView.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/getView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/has.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/has.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/number/inRange.js" afterPath="$PROJECT_DIR$/node_modules/lodash/number/inRange.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/includes.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/includes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/index.js" afterPath="$PROJECT_DIR$/node_modules/lodash/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/proxys/index.js" afterPath="$PROJECT_DIR$/server/proxys/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/indexOf.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/indexOf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/initCloneByTag.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/initCloneByTag.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/intersection.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/intersection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/invert.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/invert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/invoke.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/invoke.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isArguments.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isArguments.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isArray.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isArray.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isBoolean.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isBoolean.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isDate.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isDate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isElement.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isElement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isEmpty.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isEmpty.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isEqual.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isEqual.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isError.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isError.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isFinite.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isFinite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isFunction.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isFunction.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isIndex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isIterateeCall.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isIterateeCall.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isLaziable.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isLaziable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isLength.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isLength.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isMatch.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isMatch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isNative.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isNative.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isNumber.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isNumber.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isObject.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isObject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isPlainObject.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isPlainObject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isRegExp.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isRegExp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isStrictComparable.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isStrictComparable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isString.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isString.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isTypedArray.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isTypedArray.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isUndefined.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isUndefined.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/keys.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/keys.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/keysIn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/keysIn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/lazyClone.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/lazyClone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/lazyValue.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/lazyValue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/lodash.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/lodash.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/map.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/mapSet.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/mapSet.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/mapValues.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/mapValues.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/matches.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/matches.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/matchesProperty.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/matchesProperty.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math/max.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math/max.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/memoize.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/memoize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/merge.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/merge.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/metaMap.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/metaMap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math/min.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math/min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/mixin.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/mixin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/noop.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/noop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/date/now.js" afterPath="$PROJECT_DIR$/node_modules/lodash/date/now.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/omit.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/omit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/once.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/once.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/package.json" afterPath="$PROJECT_DIR$/node_modules/lodash/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/pad.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/pad.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/padLeft.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/padLeft.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/padRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/padRight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/pairs.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/pairs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/parseInt.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/parseInt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/partial.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/partial.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/partialRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/partialRight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/pick.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/pick.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/pickByArray.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/pickByArray.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/pickByCallback.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/pickByCallback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/pluck.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/pluck.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/property.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/property.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/propertyOf.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/propertyOf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/pull.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/pull.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/pullAt.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/pullAt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/number/random.js" afterPath="$PROJECT_DIR$/node_modules/lodash/number/random.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/range.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/range.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/rearg.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/rearg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/reduce.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/reduce.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/reduceRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/reduceRight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/reject.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/reject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/remove.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/remove.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/repeat.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/repeat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/restParam.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/restParam.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/result.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/result.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/sample.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/sample.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/shimKeys.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/shimKeys.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/shuffle.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/shuffle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/configs/config_passport.js" afterPath="$PROJECT_DIR$/server/configs/config_passport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/server/env.js" afterPath="$PROJECT_DIR$/test/server/env.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controllers/sign.js" afterPath="$PROJECT_DIR$/server/controllers/sign.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/size.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/size.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/slice.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/slice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/some.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/some.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/sortBy.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/sortBy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/sortByAll.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/sortByAll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/sortByOrder.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/sortByOrder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/sortedIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/sortedIndex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/sortedUniq.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/sortedUniq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/spread.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/spread.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math/sum.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math/sum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/support.js" afterPath="$PROJECT_DIR$/node_modules/lodash/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/template.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/throttle.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/throttle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/times.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/times.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/toArray.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/toArray.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/toIterable.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/toIterable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/toObject.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/toObject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/transform.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/transform.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/trunc.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/trunc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/union.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/union.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/uniq.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/uniq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/unzip.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/unzip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/server/controllers/sign.test.js" afterPath="$PROJECT_DIR$/test/server/controllers/sign.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seeds/user.js" afterPath="$PROJECT_DIR$/seeds/user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/proxys/user.js" afterPath="$PROJECT_DIR$/server/proxys/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/without.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/without.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/words.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/words.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/wrap.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/wrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperCommit.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperCommit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperPlant.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperPlant.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperReverse.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperReverse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/xor.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/xor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/www" afterPath="$PROJECT_DIR$/bin/www" />
     </list>
     <ignored path="runners.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -270,37 +38,27 @@
         <entry file="file://$PROJECT_DIR$/test/server/controllers/sign.test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+              <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/utils.js">
+      <file leaf-file-name="sign.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controllers/sign.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            <state vertical-scroll-proportion="-6.935484">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="env.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/server/env.js">
+      <file leaf-file-name="config_passport.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/configs/config_passport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/seeds/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5519481">
-              <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
+            <state vertical-scroll-proportion="0.3923077">
+              <caret line="18" column="80" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -323,26 +81,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/test.js" />
-        <option value="$PROJECT_DIR$/test/config.js" />
-        <option value="$PROJECT_DIR$/test/app.js" />
-        <option value="$PROJECT_DIR$/server/helpers/helper_tools.js" />
-        <option value="$PROJECT_DIR$/server/models/base_model.js" />
-        <option value="$PROJECT_DIR$/test/user.test.js" />
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/contributors.txt" />
         <option value="$PROJECT_DIR$/npm-debug.log" />
-        <option value="$PROJECT_DIR$/server/routes/index.js" />
         <option value="module.js" />
         <option value="vm.js" />
-        <option value="$PROJECT_DIR$/server/configs/config_passport.js" />
         <option value="$PROJECT_DIR$/test/models/user.test.js" />
         <option value="node.js" />
         <option value="$PROJECT_DIR$/server/models/user.js" />
         <option value="$PROJECT_DIR$/test/helpers.js" />
         <option value="events.js" />
         <option value="_stream_readable.js" />
-        <option value="$PROJECT_DIR$/server/controllers/site.js" />
         <option value="$PROJECT_DIR$/server/models/index.js" />
         <option value="$PROJECT_DIR$/test/helpers/helper_mail.test.js" />
         <option value="$PROJECT_DIR$/test/app.test.js" />
@@ -353,27 +102,36 @@
         <option value="$PROJECT_DIR$/server/helpers/helper_response.js" />
         <option value="$PROJECT_DIR$/server/helpers/helper_tokenextractor.js" />
         <option value="$PROJECT_DIR$/server/helpers/index.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/server/configs/config_express.js" />
         <option value="$PROJECT_DIR$/server/proxys/index.js" />
         <option value="$PROJECT_DIR$/server/configs/index.js" />
-        <option value="$PROJECT_DIR$/server/controllers/sign.js" />
         <option value="$PROJECT_DIR$/server/middlewares/authorization.js" />
         <option value="$PROJECT_DIR$/test/superagent_utils.js" />
         <option value="$PROJECT_DIR$/test/controllers/sign.test.js" />
         <option value="$PROJECT_DIR$/test/server/helpers/helper_mail.test.js" />
         <option value="$PROJECT_DIR$/test/server/models/user.test.js" />
-        <option value="$PROJECT_DIR$/test/server/app.test.js" />
         <option value="$PROJECT_DIR$/server/helpers/helper_log.js" />
-        <option value="$PROJECT_DIR$/server/configs/config.js" />
         <option value="$PROJECT_DIR$/test/utils.js" />
         <option value="$PROJECT_DIR$/seeds/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/controllers/index.js" />
-        <option value="$PROJECT_DIR$/test/server/controllers/sign.test.js" />
-        <option value="$PROJECT_DIR$/seeds/user.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/test/server/app.test.js" />
         <option value="$PROJECT_DIR$/test/server/env.js" />
+        <option value="$PROJECT_DIR$/seeds/user.js" />
         <option value="$PROJECT_DIR$/server/proxys/user.js" />
+        <option value="$PROJECT_DIR$/bin/www" />
+        <option value="$PROJECT_DIR$/server/controllers/site.js" />
+        <option value="$PROJECT_DIR$/server/configs/config.js" />
+        <option value="$PROJECT_DIR$/server/app.js" />
+        <option value="$PROJECT_DIR$/test/paras.js" />
+        <option value="$PROJECT_DIR$/test/server/utils.js" />
+        <option value="$PROJECT_DIR$/config.js" />
+        <option value="$PROJECT_DIR$/test/parameters.js" />
+        <option value="$PROJECT_DIR$/server/routes/index.js" />
+        <option value="$PROJECT_DIR$/test/server/controllers/sign.test.js" />
+        <option value="$PROJECT_DIR$/server/controllers/sign.js" />
+        <option value="$PROJECT_DIR$/server/configs/config_passport.js" />
       </list>
     </option>
   </component>
@@ -388,10 +146,10 @@
     <data>$PROJECT_DIR$/node_modules/mocha</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-4" />
-    <option name="width" value="1857" />
-    <option name="height" value="1085" />
+    <option name="x" value="53" />
+    <option name="y" value="125" />
+    <option name="width" value="1603" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -459,7 +217,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -491,6 +248,10 @@
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -505,10 +266,6 @@
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -538,7 +295,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="proxys" />
+              <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -556,7 +313,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -570,27 +327,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="seeds" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runners" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runners" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="configs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -615,10 +363,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/server" />
+      <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/test/models" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/server/configs/passport" />
-      <recent name="$PROJECT_DIR$/server/configs" />
     </key>
   </component>
   <component name="RunManager" selected="Mocha.Test">
@@ -807,7 +555,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447860395609</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="201511120">
+      <created>1448133859004</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1448133859004</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -820,27 +574,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="false" />
+    <frame x="53" y="125" width="1603" height="916" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16539301" sideWeight="0.49107143" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32643119" sideWeight="0.49346405" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.454324" sideWeight="0.5074449" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1590621" sideWeight="0.49107143" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3261694" sideWeight="0.49346405" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42983565" sideWeight="0.50760454" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32756326" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" x="840" y="422" width="1043" height="256" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32756326" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" x="840" y="422" width="1043" height="256" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45259166" sideWeight="0.49255508" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24981949" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32708332" sideWeight="0.49018005" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996207" sideWeight="0.49018005" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22817133" sideWeight="0.5089286" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42983565" sideWeight="0.49239543" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45294118" sideWeight="0.49255508" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38246042" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34513274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34166667" sideWeight="0.49673203" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -886,214 +640,61 @@
     <MESSAGE value="20151117" />
     <MESSAGE value="20151118" />
     <MESSAGE value="20151119" />
-    <option name="LAST_COMMIT_MESSAGE" value="20151119" />
+    <MESSAGE value="201511120" />
+    <option name="LAST_COMMIT_MESSAGE" value="201511120" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/mongodb/db.js</url>
-          <line>861</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/server/controllers/sign.js</url>
+          <line>28</line>
+          <option name="timeStamp" value="124" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/nodemailer/lib/engines/stub.js</url>
-          <line>22</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js</url>
-          <line>36</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js</url>
-          <line>41</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js</url>
-          <line>60</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js</url>
+          <url>file://$PROJECT_DIR$/test/server/controllers/sign.test.js</url>
           <line>63</line>
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js</url>
-          <line>183</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js</url>
-          <line>195</line>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js</url>
-          <line>217</line>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js</url>
-          <line>236</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js</url>
-          <line>240</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js</url>
-          <line>104</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js</url>
-          <line>84</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/helpers/helper_mail.js</url>
-          <line>13</line>
-          <option name="timeStamp" value="72" />
+          <option name="timeStamp" value="142" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/controllers/sign.js</url>
-          <line>100</line>
-          <option name="timeStamp" value="79" />
+          <line>37</line>
+          <option name="timeStamp" value="143" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/controllers/sign.js</url>
-          <line>108</line>
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/controllers/site.js</url>
-          <line>3</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test/server/app.test.js</url>
-          <line>11</line>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test/server/env.js</url>
+          <url>file://$PROJECT_DIR$/server/configs/config_passport.js</url>
           <line>22</line>
-          <option name="timeStamp" value="93" />
+          <option name="timeStamp" value="144" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test/server/env.js</url>
-          <line>16</line>
-          <option name="timeStamp" value="95" />
+          <url>file://$PROJECT_DIR$/server/controllers/sign.js</url>
+          <line>38</line>
+          <option name="timeStamp" value="145" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/seeds/user.js</url>
-          <line>12</line>
-          <option name="timeStamp" value="96" />
+          <url>file://$PROJECT_DIR$/server/controllers/sign.js</url>
+          <line>43</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/controllers/sign.js</url>
+          <line>49</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/controllers/sign.js</url>
+          <line>54</line>
+          <option name="timeStamp" value="148" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="97" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="149" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="2" selection-start-line="54" selection-start-column="2" selection-end-line="54" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="229" column="2" selection-start-line="229" selection-start-column="2" selection-end-line="229" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="283" column="2" selection-start-line="283" selection-start-column="2" selection-end-line="283" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/node_modules/kareem/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/node_modules/hooks-fixed/hooks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/document.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7708738">
-          <caret line="1699" column="8" selection-start-line="1699" selection-start-column="8" selection-end-line="1699" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8367347">
-          <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/connection/connection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="309" column="2" selection-start-line="309" selection-start-column="2" selection-end-line="309" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/topologies/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="247" column="2" selection-start-line="247" selection-start-column="2" selection-end-line="247" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bcryptjs/externs/minimal-env.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/supertest/lib/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/site.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="50" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/base_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mocha/lib/interfaces/bdd.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33187774">
@@ -1101,18 +702,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/helpers/helper_redis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6194332">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/helpers/helper_mail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58502024">
           <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1179,13 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20647773">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/middlewares/authorization.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9640832">
@@ -1200,31 +786,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36666667">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/services/service_jwt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="46" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/configs/config_passport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/server/superagent_utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39203355">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1242,27 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/configs/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2066805">
-          <caret line="79" column="3" selection-start-line="79" selection-start-column="3" selection-end-line="79" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56666666">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/server/helpers/helper_mail.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2851153">
@@ -1270,46 +815,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/server/app.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/nodemailer/src/nodemailer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mocha/lib/runnable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3666667">
-          <caret line="319" column="0" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3595238">
           <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/proxys/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seeds/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,18 +830,221 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/sign.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/chance/dist/chance.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82735425">
-          <caret line="120" column="28" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.8398637">
+          <caret line="0" column="5179" selection-start-line="0" selection-start-column="5179" selection-end-line="0" selection-end-column="5179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seeds/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/helpers/helper_redis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4675615">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/nodemailer/src/nodemailer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mocha/lib/runnable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="262" column="16" selection-start-line="262" selection-start-column="16" selection-end-line="262" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/services/service_jwt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5217391">
+          <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/connection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37474543">
+          <caret line="177" column="18" selection-start-line="177" selection-start-column="17" selection-end-line="177" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/schema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36465323">
+          <caret line="250" column="8" selection-start-line="250" selection-start-column="8" selection-end-line="250" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/node_modules/hooks-fixed/hooks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79418343">
+          <caret line="189" column="2" selection-start-line="189" selection-start-column="2" selection-end-line="189" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/proxys/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/document.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21140142">
+          <caret line="1696" column="0" selection-start-line="1696" selection-start-column="0" selection-end-line="1696" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38717338">
+          <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/site.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20190024">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3325416">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3923077">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/server/app.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60850114">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/server/env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42183623">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/server/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16873449">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seeds/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58064514">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/proxys/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3131991">
+          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/helpers/helper_flash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/utils.js">
+    <entry file="file://$PROJECT_DIR$/server/configs/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44418052">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/node_modules/serve-static/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="124" column="2" selection-start-line="124" selection-start-column="2" selection-end-line="124" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/passport/lib/middleware/initialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="280" column="4" selection-start-line="280" selection-start-column="4" selection-end-line="280" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/sign.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.935484">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1339,30 +1052,15 @@
     <entry file="file://$PROJECT_DIR$/test/server/controllers/sign.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/server/env.js">
+    <entry file="file://$PROJECT_DIR$/server/configs/config_passport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/proxys/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50769234">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seeds/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5519481">
-          <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.3923077">
+          <caret line="18" column="80" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
           <folding />
         </state>
       </provider>

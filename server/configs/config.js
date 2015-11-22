@@ -11,8 +11,9 @@ var config = {
         token_secret : 'runners-secret'
     },
     client: {
-        root   : '/app',
+        root   : '../app',
         tmp    : '',
+        bower  : '../bower_components'
     },
     redis: {
         keyspace : 'session:',
