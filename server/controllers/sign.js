@@ -65,10 +65,7 @@ function signin(req, res, next){
                     }));
                 })
             });
-        });
-
-        //res.status(401);
-        //return res.send(flash(401, 'Unauthorized' ,null));
+        })(req, res, next);
     } else{
         res.status(401);
         return res.send(flash(401, 'Not enough information to log in' ,null));

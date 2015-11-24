@@ -1,3 +1,6 @@
+var BB = require('bluebird');
+var jwt = require('jsonwebtoken');
+
 var config = {
     debug: false,
     hostname: 'localhost.runners.org',
@@ -34,6 +37,7 @@ var config = {
 
 if (process.env.NODE_ENV === 'test') {
     config.db = 'mongodb://localhost/runners-test';
+    BB.promisifyAll(require('supertest'));
 }
 
 module.exports = config;

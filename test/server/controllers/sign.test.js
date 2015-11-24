@@ -64,8 +64,8 @@ describe('test/controllers/sign.test.js', function (){
             it('should respond 401 (invalid credentials)', function(done){
                 request.post('/signin')
                     .send({
-                        email: email,
-                        password: pass,
+                        email: 'fake@user.com',
+                        password: 'fake_password',
                     })
                     .expect(401, function(err, res){
                         should.not.exists(err);
