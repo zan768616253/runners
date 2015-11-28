@@ -1,64 +1,75 @@
 (function(){
     app
-        .controller('SignUpController', function(){
-            var ctrl = this;
-            var newUser = { email:'', userName:'', password:'' };
+        .controller('SignUpController', ['Auth',
+            function(Auth){
+                var ctrl = this;
+                var newUser = { email:'', loginName:'', password:'' };
 
-            var signup = function () {
-                if( ctrl.signupForm.$valid) {
-                    ctrl.showSubmittedPrompt = true;
-                    clearForm();
+                var signup = function () {
+                    if( ctrl.signupForm.$valid) {
+                        ctrl.showSubmittedPrompt = true;
+                        Auth.register({
+                            email: ctrl.newUser.email,
+                            loginname: ctrl.newUser.loginName,
+                            password: ctrl.newUser.password,
+                            re_password: ctrl.newUser.passwordConfirmed
+                        }, function(){}, function(err){});
+
+                        //clearForm();
+                    }
+                };
+
+                var clearForm = function () {
+                    ctrl.newUser = { email:'', loginName:'', password:'' }
+                    ctrl.signupForm.$setUntouched();
+                    ctrl.signupForm.$setPristine();
+                };
+
+                var getPasswordType = function () {
+                    return ctrl.signupForm.showPassword ? 'text' : 'password';
+                };
+
+                var hasErrorClass = function (field) {
+                    if(field == 'email'){
+                        ctrl.showEmailError = ctrl.signupForm['email'].$touched && ctrl.signupForm['email'].$invalid;
+                    } else if(field == 'server'){
+
+                    } else if(field == 'loginName'){
+                        ctrl.showLoginNameError = ctrl.signupForm['loginName'].$touched && ctrl.signupForm['loginName'].$invalid;
+                    }
+                    return ctrl.signupForm[field].$touched && ctrl.signupForm[field].$invalid;
+                };
+
+                var showMessages = function (field) {
+                    return ctrl.signupForm[field].$touched || ctrl.signupForm.$submitted
+                };
+
+                var toggleEmailPrompt = function (value) {
+                    ctrl.showEmailPrompt = value;
                 }
-            };
 
-            var clearForm = function () {
-                ctrl.newCustomer = { email:'', userName:'', password:'' }
-                ctrl.signupForm.$setUntouched();
-                ctrl.signupForm.$setPristine();
-            };
+                var toggleLoginNamePrompt = function (value) {
+                    ctrl.showLoginNamePrompt = value;
+                };
 
-            var getPasswordType = function () {
-                return ctrl.signupForm.showPassword ? 'text' : 'password';
-            };
+                ctrl.showEmailPrompt = false;
+                ctrl.showEmailError = false;
 
-            var hasErrorClass = function (field) {
-                if(field == 'email'){
-                    ctrl.showEmailError = ctrl.signupForm['email'].$touched && ctrl.signupForm['email'].$invalid;
-                } else if(field == 'userName'){
-                    ctrl.showUsernameError = ctrl.signupForm['userName'].$touched && ctrl.signupForm['userName'].$invalid;
-                }
-                return ctrl.signupForm[field].$touched && ctrl.signupForm[field].$invalid;
-            };
+                ctrl.showLoginNamePrompt = false;
+                ctrl.showULoginNameError = false;
 
-            var showMessages = function (field) {
-                return ctrl.signupForm[field].$touched || ctrl.signupForm.$submitted
-            };
+                ctrl.showPasswordPrompt = false;
+                ctrl.showPasswordError = false;
 
-            var toggleEmailPrompt = function (value) {
-                ctrl.showEmailPrompt = value;
+                ctrl.showSubmittedPrompt = true;
+                ctrl.toggleEmailPrompt = toggleEmailPrompt;
+                ctrl.toggleLoginNamePrompt = toggleLoginNamePrompt;
+                ctrl.getPasswordType = getPasswordType;
+                ctrl.hasErrorClass = hasErrorClass;
+                ctrl.showMessages = showMessages;
+                ctrl.newUser = newUser;
+                ctrl.signup = signup;
+                ctrl.clearForm = clearForm;
             }
-
-            var toggleUsernamePrompt = function (value) {
-                ctrl.showUsernamePrompt = value;
-            };
-
-            ctrl.showEmailPrompt = false;
-            ctrl.showEmailError = false;
-
-            ctrl.showUsernamePrompt = false;
-            ctrl.showUsernameError = false;
-
-            ctrl.showPasswordPrompt = false;
-            ctrl.showPasswordError = false;
-
-            ctrl.showSubmittedPrompt = true;
-            ctrl.toggleEmailPrompt = toggleEmailPrompt;
-            ctrl.toggleUsernamePrompt = toggleUsernamePrompt;
-            ctrl.getPasswordType = getPasswordType;
-            ctrl.hasErrorClass = hasErrorClass;
-            ctrl.showMessages = showMessages;
-            ctrl.newUser = newUser;
-            ctrl.signup = signup;
-            ctrl.clearForm = clearForm;
-        })
+        ])
 })()

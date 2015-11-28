@@ -18,7 +18,6 @@
                         <input id="email" name="email" class="form-control" type="email" required
                                ng-model="ctrl.newUser.email" ng-model-options="{ updateOn : 'default blur' }"
                                ng-focus="ctrl.toggleEmailPrompt(true)" ng-blur="ctrl.toggleEmailPrompt(false)"/>
-                        <!--<div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.email.$valid" ng-if="ctrl.showEmailPrompt && !ctrl.showEmailError">只能使用邮箱或者手机号</div>-->
                         <div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.email.$error" ng-if="ctrl.showMessages('email')">
                             <div class="message-animation" ng-message="required">
                                 <strong>This field is required.</strong>
@@ -26,20 +25,22 @@
                             <div class="message-animation" ng-message="email">
                                 <strong>Please format your email correctly.</strong>
                             </div>
+                            <div class="message-animation" ng-message="server">
+
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="signup-fieldtr form-group" ng-class="{'has-error':ctrl.hasErrorClass('userName')}">
+                <div class="signup-fieldtr form-group" ng-class="{'has-error':ctrl.hasErrorClass('loginName')}">
                     <div class="signup-fieldtd">
-                        <label for="userName">约跑昵称</label>
+                        <label for="loginName">约跑昵称</label>
                     </div>
                     <div class="signup-fieldtd">
-                        <input id="userName" name="userName" class="form-control" type="text" required
-                               ng-model="ctrl.newUser.userName" ng-model-options="{ updateOn : 'default blur' }"
-                               ng-focus="ctrl.toggleUsernamePrompt(true)" ng-blur="ctrl.toggleUsernamePrompt(false)"/>
-                        <!--<div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.userName.$valid" ng-if="ctrl.showUsernamePrompt && !ctrl.showUsernameError">username</div>-->
-                        <div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.userName.$error"  ng-if="ctrl.showMessages('userName')">
+                        <input id="loginName" name="loginName" class="form-control" type="text" required
+                               ng-model="ctrl.newUser.loginName" ng-model-options="{ updateOn : 'default blur' }"
+                               ng-focus="ctrl.toggleLoginNamePrompt(true)" ng-blur="ctrl.toggleLoginNamePrompt(false)"/>
+                        <div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.loginName.$error"  ng-if="ctrl.showMessages('loginName')">
                             <div class="message-animation" ng-message="required">
                                 <strong>This field is required.</strong>
                             </div>

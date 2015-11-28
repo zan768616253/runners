@@ -84,6 +84,41 @@ describe('test/controllers/sign.test.js', function (){
                         done();
                     });
             });
+
+            it('should respond 401 (invalid password)', function(done){
+                request.post('/signin')
+                    .send({
+                        email: email,
+                        password: 'fake_password',
+                    })
+                    .expect(401, function(err, res){
+                        should.not.exists(err);
+                        res.body.should.not.be.empty;
+                        res.body.status.message.should.equal('Unauthorized');
+                        done();
+                    })
+            })
+
+            it('should respond 200', function(done){
+                request.post('/signin')
+                    .send({
+                        email: email,
+                        password: pass,
+                    })
+                    .expect(200, function(err, res){
+                        should.not.exists(err);
+                        res.body.should.not.be.empty;
+                        res.body.status.message.should.equal('Authentication successful!');
+                        done();
+                    })
+            })
+        });
+
+        describe('sign out', function (){
+            it('should respond 204', function(done){
+                request.post('/signout')
+                    .expect(200).end(done);
+            })
         });
     }
 );

@@ -3,14 +3,11 @@
  */
 (function(){
     app
-        .factory('Auth', ['$http', '$cookieStore',
-            function($http, $cookieStore){
-
+        .factory('Auth', ['$http', '$window', '$location', '$rootScope',
+            function($http, $cookies){
                 var accessLevels = config_router.accessLevels,
                     userRoles = config_router.userRoles,
-                    currentUser = $cookieStore.get('user') || { username: '', role: userRoles.public };
-
-                $cookieStore.remove('user');
+                    currentUser = $cookies['user']  || { username: '', role: userRoles.public };
 
                 function changeUser(user) {
                     angular.extend(currentUser, user);
@@ -30,19 +27,19 @@
                         return user.role.title === userRoles.user.title || user.role.title === userRoles.admin.title;
                     },
                     register: function(user, success, error){
-                        $http.post('/register', user).success(function(res) {
+                        $http.post('/signup', user).success(function(res) {
                             changeUser(res);
                             success();
                         }).error(error);
                     },
                     login: function(user, success, error) {
-                        $http.post('/login', user).success(function(user){
+                        $http.post('/signin', user).success(function(user){
                             changeUser(user);
                             success(user);
                         }).error(error);
                     },
                     logout: function(success, error) {
-                        $http.post('/logout').success(function(){
+                        $http.post('/signout').success(function(){
                             changeUser({
                                 username: '',
                                 role: userRoles.public
@@ -56,27 +53,24 @@
                 }
             }
         ])
-        .factory('Users', function($http) {
-            return {
-                getAll: function(success, error) {
-                    $http.get('/users').success(success).error(error);
-                }
-            };
-        })
-        .factory('HintFactory', ['$http',
-            function ($http){
-                return {
-                    getHintsCount: function (data, success, error) {
+        .factory('TokenInterceptor', ['$q', '$cookies',
+            function($q, $cookies){
+                return{
+                    request: function(config){
+                        config.headers = config.headers || {};
+                        if ($cookies['token']){
+                            config.headers.Authorization = 'Bearer ' +  cookies['token'];
+                        }
+                        return config;
                     },
-                    getAllHints: function (data, success, error) {
-                    },
-                    pullRequest: function (data, success, error) {
-                    },
-                    markHint: function (data, success, error) {
-                    },
-                    acceptHint: function (data, success, error) {
+                    response: function (response) {
+
+                        return response || $q.when(response);
                     }
-                };
-            }
-        ])
+                }
+            }]
+        )
+        .config(['$httpProvider', function($httpProvider){
+
+        }])
 })()

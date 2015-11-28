@@ -40,24 +40,20 @@ function signin(req, res, next){
                 res.status(500);
                 return res.send(flash(500, err ,null));
             }
-
             if (!user){
                 res.status(401);
                 return res.send(flash(401, 'Unauthorized' ,null));
             }
-
             req.logIn(user, { session: false }, function(err){
                 if (err) {
                     res.status(500);
                     return res.send(flash(500, err ,null));
                 }
-
                 return jwtRedisService.sign(user).then(function(token){
                     if (!token){
                         res.status(500);
                         return res.send(flash(500, "Authentication Interbale Err!", null));
                     }
-
                     res.status(200);
                     res.send(flash(200, "Authentication successful!", {
                         token   : token,
@@ -256,6 +252,38 @@ function updatePass (req, res, next){
     );
 }
 
+function checkEmail(req, res, next){
+    var email = validator.trim(req.body.email).toLowerCase();
+
+    User.getUserByMail(email, function(err, user){
+        if (err) {
+            return next(err);
+        }
+        if (user) {
+            return res.send(flash(422, '邮箱已被使用。', null));
+        }
+
+        return res.send(flash(200, '邮箱可以使用。', null));
+    });
+}
+
+
+function checkLoginname(req, res, next){
+    var loginname = validator.trim(req.body.loginname).toLowerCase();
+
+    User.getUserByLoginName(loginname, function(err, user){
+        if (err) {
+            return next(err);
+        }
+        if (user) {
+            return res.send(flash(422, '用户名已被使用。', null));
+        }
+
+        return res.send(flash(200, '用户名可以使用。', null));
+    });
+}
+
+
 module.exports.signin = signin;
 module.exports.signup = signup;
 module.exports.signout = signout;
@@ -263,3 +291,5 @@ module.exports.activeAccount = activeAccount;
 module.exports.updateSearchPass = updateSearchPass;
 module.exports.resetPass = resetPass;
 module.exports.updatePass = updatePass;
+module.exports.checkEmail = checkEmail;
+module.exports.checkLoginname = checkLoginname;

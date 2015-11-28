@@ -12,4 +12,6 @@ module.exports = function (app, passport){
     app.post('/signin', sign.signin);
     app.post('/signup', sign.signup);
     app.post('/signout', sign.signout);
+    app.post('/checkemail', sign.checkEmail);
+    app.post('/checkloginname', sign.checkLoginname);
 };
