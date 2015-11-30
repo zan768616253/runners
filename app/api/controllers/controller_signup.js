@@ -3,7 +3,7 @@
         .controller('SignUpController', ['Auth',
             function(Auth){
                 var ctrl = this;
-                var newUser = { email:'', loginName:'', password:'' };
+                var newUser = { email:'', loginName:'s', password:'s', passwordConfirmed:'s'};
 
                 var signup = function () {
                     if( ctrl.signupForm.$valid) {
@@ -30,19 +30,16 @@
                 };
 
                 var hasErrorClass = function (field) {
-                    if(field == 'email'){
-                        ctrl.showEmailError = ctrl.signupForm['email'].$touched && ctrl.signupForm['email'].$invalid;
-                    } else if(field == 'server'){
-
-                    } else if(field == 'loginName'){
-                        ctrl.showLoginNameError = ctrl.signupForm['loginName'].$touched && ctrl.signupForm['loginName'].$invalid;
-                    }
                     return ctrl.signupForm[field].$touched && ctrl.signupForm[field].$invalid;
                 };
 
                 var showMessages = function (field) {
                     return ctrl.signupForm[field].$touched || ctrl.signupForm.$submitted
                 };
+
+                var showServerMessage = function (field) {
+                    return (ctrl.signupForm[field].$touched || ctrl.signupForm.$submitted) && !showMessages(field);
+                }
 
                 var toggleEmailPrompt = function (value) {
                     ctrl.showEmailPrompt = value;
@@ -67,6 +64,7 @@
                 ctrl.getPasswordType = getPasswordType;
                 ctrl.hasErrorClass = hasErrorClass;
                 ctrl.showMessages = showMessages;
+                ctrl.showServerMessage = showServerMessage;
                 ctrl.newUser = newUser;
                 ctrl.signup = signup;
                 ctrl.clearForm = clearForm;

@@ -15,7 +15,7 @@
                         <label for="email">Email</label>
                     </div>
                     <div class="signup-fieldtd">
-                        <input id="email" name="email" class="form-control" type="email" required
+                        <input id="email" name="email" class="form-control" type="email" exist-email required
                                ng-model="ctrl.newUser.email" ng-model-options="{ updateOn : 'default blur' }"
                                ng-focus="ctrl.toggleEmailPrompt(true)" ng-blur="ctrl.toggleEmailPrompt(false)"/>
                         <div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.email.$error" ng-if="ctrl.showMessages('email')">
@@ -25,8 +25,8 @@
                             <div class="message-animation" ng-message="email">
                                 <strong>Please format your email correctly.</strong>
                             </div>
-                            <div class="message-animation" ng-message="server">
-
+                            <div class="message-animation" ng-message="existEmail">
+                                <strong>Please try another email.</strong>
                             </div>
                         </div>
                     </div>
@@ -37,12 +37,15 @@
                         <label for="loginName">约跑昵称</label>
                     </div>
                     <div class="signup-fieldtd">
-                        <input id="loginName" name="loginName" class="form-control" type="text" required
+                        <input id="loginName" name="loginName" class="form-control" type="text" exist-loginname required
                                ng-model="ctrl.newUser.loginName" ng-model-options="{ updateOn : 'default blur' }"
                                ng-focus="ctrl.toggleLoginNamePrompt(true)" ng-blur="ctrl.toggleLoginNamePrompt(false)"/>
                         <div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.loginName.$error"  ng-if="ctrl.showMessages('loginName')">
                             <div class="message-animation" ng-message="required">
                                 <strong>This field is required.</strong>
+                            </div>
+                            <div class="message-animation" ng-message="existLoginname">
+                                <strong>Please try another login name.</strong>
                             </div>
                         </div>
                     </div>
@@ -77,8 +80,8 @@
                     </div>
                     <div class="control-group">
                         <div class="input-group">
-                            <input id="passwordConfirmed" name="passwordConfirmed" class="form-control" required type="{{ctrl.getPasswordType()}}"
-                                   ng-model="ctrl.newUser.passwordConfirmed" ng-model-options="{ updateOn : 'default blur' }"
+                            <input id="passwordConfirmed" name="passwordConfirmed" class="form-control" required compare-to='ctrl.newUser.password'
+                                   type="{{ctrl.getPasswordType()}}" ng-model="ctrl.newUser.passwordConfirmed" ng-model-options="{ updateOn : 'default blur' }"
                                    validate-password-characters/>
                         <span class="input-group-addon">
                             <input type="checkbox" ng-model="ctrl.signupForm.showPasswordConfirmed"> 显示
@@ -89,6 +92,9 @@
                         <div class="Validform_checktip prompt message-animation" ng-messages="ctrl.signupForm.passwordConfirmed.$error"  ng-if="ctrl.showMessages('passwordConfirmed')">
                             <div class="message-animation" ng-message="required">
                                 <strong>This field is required.</strong>
+                            </div>
+                            <div class="message-animation" ng-message="compareTo">
+                                <strong>password is not matched.</strong>
                             </div>
                         </div>
                     </div>

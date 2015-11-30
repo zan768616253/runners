@@ -120,5 +120,61 @@ describe('test/controllers/sign.test.js', function (){
                     .expect(200).end(done);
             })
         });
+
+        describe('email existed', function(){
+            it('should exist', function(done){
+                request.post('/checkemail')
+                    .send({
+                        email: email
+                    })
+                    .expect(200, function(err, res){
+                        should.not.exists(err);
+                        res.body.should.not.be.empty;
+                        res.body.status.message.should.equal('邮箱已被使用。');
+                        done();
+                    })
+            });
+
+            it('should not exist', function(done){
+                request.post('/checkemail')
+                    .send({
+                        email: 'fake@user.com'
+                    })
+                    .expect(200, function(err, res){
+                        should.not.exists(err);
+                        res.body.should.not.be.empty;
+                        res.body.status.message.should.equal('邮箱可以使用。');
+                        done();
+                    })
+            });
+        });
+
+        describe('loginname existed', function(){
+            it('should exist', function(done){
+                request.post('/checkloginname')
+                    .send({
+                        loginname: loginname
+                    })
+                    .expect(200, function(err, res){
+                        should.not.exists(err);
+                        res.body.should.not.be.empty;
+                        res.body.status.message.should.equal('用户名已被使用。');
+                        done();
+                    })
+            });
+
+            it('should not exist', function(done){
+                request.post('/checkloginname')
+                    .send({
+                        loginname: 'fakeuser'
+                    })
+                    .expect(200, function(err, res){
+                        should.not.exists(err);
+                        res.body.should.not.be.empty;
+                        res.body.status.message.should.equal('用户名可以使用。');
+                        done();
+                    })
+            });
+        });
     }
 );

@@ -3,8 +3,8 @@
  */
 (function(){
     app
-        .factory('Auth', ['$http', '$window', '$location', '$rootScope',
-            function($http, $cookies){
+        .factory('Auth', ['$http', '$cookies', '$q',
+            function($http, $cookies, $q){
                 var accessLevels = config_router.accessLevels,
                     userRoles = config_router.userRoles,
                     currentUser = $cookies['user']  || { username: '', role: userRoles.public };
@@ -33,8 +33,8 @@
                         }).error(error);
                     },
                     login: function(user, success, error) {
-                        $http.post('/signin', user).success(function(user){
-                            changeUser(user);
+                        $http.post('/signin', user).success(function(res){
+                            changeUser(res);
                             success(user);
                         }).error(error);
                     },
@@ -46,6 +46,56 @@
                             });
                             success();
                         }).error(error);
+                    },
+                    checkEmail: function(email){
+                        var deferred = $q.defer();
+                        var message = {
+                            isExist: false,
+                            message: ''
+                        };
+                        $http.post('/checkemail', {email: email}).success(function(res){
+                            switch(res.status.code){
+                                case 200:
+                                    message.isExist = false;
+                                    message.message = res.status.message;
+                                    break;
+                                case 422:
+                                    message.isExist = true;
+                                    message.message = res.status.message;
+                                    break;
+                            }
+                            deferred.resolve(message);
+                        }).error(function(){
+                            message.isExist = true;
+                            message.message = 'server error';
+                            deferred.resolve(message);
+                        })
+                        return deferred.promise;
+                    },
+                    checkName: function(loginname){
+                        var deferred = $q.defer();
+                        var message = {
+                            isExist: false,
+                            message: ''
+                        };
+                        $http.post('/checkloginname', {loginname: loginname}).success(function(res){
+                            switch(res.status.code){
+                                case 200:
+                                    message.isExist = false;
+                                    message.message = res.status.message;
+                                    break;
+                                case 422:
+                                    message.isExist = true;
+                                    message.message = res.status.message;
+                                    break;
+                            }
+                            deferred.resolve(message);
+                        }).error(function(){
+                            message.isExist = true;
+                            message.message = 'server error';
+                            deferred.resolve(message);
+                        })
+                        return deferred.promise;
                     },
                     accessLevels: accessLevels,
                     userRoles: userRoles,

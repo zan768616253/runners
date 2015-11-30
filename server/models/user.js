@@ -9,7 +9,6 @@ var userRoles = require('../configs/config_router').userRoles;
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-    name: { type: String},
     loginname: { type: String},
     pass: { type: String },
     email: { type: String},
