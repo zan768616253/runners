@@ -34,10 +34,16 @@
                             access: access.public
                         }
                     })
-                    .state('register', {
-                        url: '/register/',
-                        //controller: 'SignUpController',
-                        templateUrl: '../views/tpl/tpl_register.html',
+                    .state('register_accountinfo', {
+                        url: '/register_accountinfo/',
+                        templateUrl: '../views/tpl/tpl_register_accountinfo.html',
+                        data: {
+                            access: access.public
+                        }
+                    })
+                    .state('register_userinfo', {
+                        url: '/register_userinfo/',
+                        templateUrl: '../views/tpl/tpl_register_userinfo.html',
                         data: {
                             access: access.public
                         }

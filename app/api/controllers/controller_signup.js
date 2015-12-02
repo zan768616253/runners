@@ -1,7 +1,7 @@
 (function(){
     app
-        .controller('SignUpController', ['Auth',
-            function(Auth){
+        .controller('SignUpController', ['Auth', 'ngFoobar', '$state', '$timeout',
+            function(Auth, ngFoobar, $state, $timeout){
                 var ctrl = this;
                 var newUser = { email:'', loginName:'s', password:'s', passwordConfirmed:'s'};
 
@@ -13,9 +13,30 @@
                             loginname: ctrl.newUser.loginName,
                             password: ctrl.newUser.password,
                             re_password: ctrl.newUser.passwordConfirmed
-                        }, function(){}, function(err){});
+                        }, function(){
+                            ngFoobar.setOpacity(0.8);
+                            ngFoobar.setAutoClose(true, 2000);
+                            ngFoobar.show("success", "Congratulations, Register Successfully");
 
+                            $timeout(function(){
+                                $state.go('register_userinfo');
+                            }, 1700);
+                        }, function(err){
+
+                        });
                         //clearForm();
+                    } else {
+                        ngFoobar.setOpacity(0.8);
+                        ngFoobar.setAutoClose(true, 3000);
+
+                        var invalidMsgs = ctrl.signupForm.$error;
+                        var invalidMsgAttrs = Object.keys(ctrl.signupForm.$error);
+                        if (invalidMsgs && angular.isArray(invalidMsgs[invalidMsgAttrs[0]]) && invalidMsgs[invalidMsgAttrs[0]].length > 0){
+                            var invalidMsg = invalidMsgs[invalidMsgAttrs[0]][0];
+                            ngFoobar.show("error", invalidMsg.$name + ' is ' + invalidMsgAttrs[0]);
+                        } else{
+                            ngFoobar.show("error", "Server Error");
+                        }
                     }
                 };
 
