@@ -25,6 +25,7 @@
     "bootstrap": "~3.3.5",
     "angular-aria": "~1.4.7",
     "angular-messages": "~1.4.7",
-    "ng-foobar": "~0.1.0"
+    "ng-foobar": "~0.1.0",
+    "angular-modal-service": "~0.6.9"
   }
 }

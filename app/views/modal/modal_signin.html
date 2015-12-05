@@ -1,0 +1,39 @@
+<div class="modal fade" ng-controller="SignUpController as ctrl">
+    <div class="modal-dialog modal-lg modal-signin">
+        <div class="modal-content">
+            <div class="modal-header modal-signin-header">
+
+                <button type="button" class="close" ng-click="close()" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <a class="modal-signuplogo">
+                    <img src="/assets/img/signup-s.png">
+                </a>
+                <p class="modal-slogan">现在免费加入，开启精彩跑步人生</p>
+                <div class="modal-title modal-signinlogo">
+                    <img ng-src="/assets/img/logo-1.png">
+                </div>
+            </div>
+            <div class="modal-body">
+                <form name="ctrl.signinForm" class="form-horizontal" role="form" novalidate>
+                    <div class="form-group">
+                        <label for="emial" class="col-sm-3 control-label">登录名</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="emial" placeholder="email或是昵称" ng-model="ctrl.emial"
+                             required ng-model-options="{ updateOn : 'default blur' }">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-3 control-label">密码</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="password" placeholder="密码" ng-model="ctrl.password"
+                             required ng-model-options="{ updateOn : 'default blur' }">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" ng-click="ctrl.signin()" class="btn btn-primary" data-dismiss="modal">登陆</button>
+                <button type="button" ng-click="ctrl.cancel()" class="btn">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

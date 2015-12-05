@@ -3,7 +3,7 @@
  */
 var app = angular.module("app", ['ui.router','ngAnimate','ngAria',
                                 'ngMessages','ngCookies','ngSanitize',
-                                'ngFoobar']);
+                                'ngFoobar', 'angularModalService']);
 
 app.run(['$templateCache', function ($templateCache) {
     $templateCache.put('header.html','./views/tpl/header.html');

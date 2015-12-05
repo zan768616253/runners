@@ -67,7 +67,6 @@ td {
 }
 body {
   font: 14px Lucida Sans Unicode, Myriad Pro, Hiragino Sans GB, Heiti SC, Microsoft YaHei, arial;
-  color: #e7e7e7;
   height: 100%;
 }
 header {
@@ -150,4 +149,35 @@ header {
 }
 .message-animation {
   color: red;
+}
+.modal-slogan {
+  float: right;
+  margin-right: 8px;
+  padding-top: 13px;
+  color: darkgray;
+}
+.modal-signuplogo {
+  float: right;
+  margin-right: 24px;
+  padding-top: 8px;
+}
+.modal-signin {
+  width: 500px;
+}
+.modal-signin form {
+  padding-top: 15px;
+  padding-left: 75px;
+}
+.modal-signin-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.modal-signinlogo > img {
+  width: 80px;
+}
+.modal-signin-header > .modal-title {
+  width: 50%;
+}
+.modal-signin-header > .close {
+  margin-top: 8px;
 }

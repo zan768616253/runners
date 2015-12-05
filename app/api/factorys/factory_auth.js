@@ -3,8 +3,8 @@
  */
 (function(){
     app
-        .factory('Auth', ['$http', '$cookies', '$q',
-            function($http, $cookies, $q){
+        .factory('Auth', ['$http', '$cookies', '$q', 'ModalService',
+            function($http, $cookies, $q, ModalService){
                 var accessLevels = config_router.accessLevels,
                     userRoles = config_router.userRoles,
                     currentUser = $cookies['user']  || { username: '', role: userRoles.public };
@@ -13,6 +13,19 @@
                     angular.extend(currentUser, user);
                 }
 
+                function showSigninModal(){
+
+                    ModalService.showModal({
+                        templateUrl: "../../views/modal/modal_signin.html",
+                        controller: "SignInController",
+                        inputs: {
+                            title: "A More Complex Example"
+                        }
+                    }).then(function(modal){
+                        modal.element.modal();
+                        modal.close;
+                    });
+                }
                 return{
                     authorize: function(accessLevel, role){
                         if(role === undefined) {
@@ -99,7 +112,8 @@
                     },
                     accessLevels: accessLevels,
                     userRoles: userRoles,
-                    user: currentUser
+                    user: currentUser,
+                    showSigninModal: showSigninModal
                 }
             }
         ])
