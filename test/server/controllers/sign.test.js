@@ -13,7 +13,7 @@ var agentUtils = new SuperAgentUtils(agent);
 
 describe('test/controllers/sign.test.js', function (){
         var now = +new Date();
-        var loginname = 'testuser' + now;
+        var loginName = 'testuser' + now;
         var email = 'testuser' + now + '@gmail.com';
         var pass = 'wtffffffffffff';
         var usersToSeed = 10;
@@ -32,7 +32,7 @@ describe('test/controllers/sign.test.js', function (){
             it('should sign up a user', function (done) {
                 request.post('/signup')
                     .send({
-                        loginname: loginname,
+                        loginName: loginName,
                         email: email,
                         password: pass,
                         re_password: pass,
@@ -40,7 +40,7 @@ describe('test/controllers/sign.test.js', function (){
                     .expect(200, function(err, res){
                         should.not.exists(err);
                         res.text.should.containEql('欢迎加入');
-                        UserProxy.getUserByLoginName(loginname, function (err, user){
+                        UserProxy.getUserByLoginName(loginName, function (err, user){
                             should.not.exists(err);
                             user.should.ok;
                             done();
@@ -51,7 +51,7 @@ describe('test/controllers/sign.test.js', function (){
             it('should not sign up a user when email is exists', function(done){
                 request.post('/signup')
                     .send({
-                        loginname: loginname + '1',
+                        loginName: loginName + '1',
                         email: email,
                         pass: pass,
                         re_pass: pass,
@@ -149,11 +149,11 @@ describe('test/controllers/sign.test.js', function (){
             });
         });
 
-        describe('loginname existed', function(){
+        describe('login_name existed', function(){
             it('should exist', function(done){
                 request.post('/checkloginname')
                     .send({
-                        loginname: loginname
+                        loginName: loginName
                     })
                     .expect(200, function(err, res){
                         should.not.exists(err);
@@ -166,7 +166,7 @@ describe('test/controllers/sign.test.js', function (){
             it('should not exist', function(done){
                 request.post('/checkloginname')
                     .send({
-                        loginname: 'fakeuser'
+                        loginName: 'fakeuser'
                     })
                     .expect(200, function(err, res){
                         should.not.exists(err);

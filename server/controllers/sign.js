@@ -88,7 +88,7 @@ function signout(req, res, next){
 
 function signup(req, res, next){
     var email = validator.trim(req.body.email).toLowerCase();
-    var loginname = validator.trim(req.body.loginname).toLowerCase();
+    var loginName = validator.trim(req.body.loginName).toLowerCase();
     var password = validator.trim(req.body.password);
     var re_password = validator.trim(req.body.re_password);
 
@@ -96,13 +96,13 @@ function signup(req, res, next){
     ep.fail(next);
     ep.on('prop_err', function(msg){
         res.status(422);
-        res.send(flash(422, msg, {error: msg, loginname: loginname, email: email}));
+        res.send(flash(422, msg, {error: msg, loginName: loginName, email: email}));
     });
 
-    if (loginname === '' || password === '' || re_password === '' || email === ''){
+    if (loginName === '' || password === '' || re_password === '' || email === ''){
         return ep.emit('prop_err', '信息不完整。');
     }
-    if (!tools.validateId(loginname)) {
+    if (!tools.validateId(loginName)) {
         return ep.emit('prop_err', '用户名不合法。');
     }
     if (!validator.isEmail(email)) {
@@ -112,7 +112,7 @@ function signup(req, res, next){
         return ep.emit('prop_err', '两次密码输入不一致。');
     }
 
-    User.getUsersByQuery({'$or': [{'loginname': loginname}, {'email': email}]}, {}, function(err, users){
+    User.getUsersByQuery({'$or': [{'login_name': loginName}, {'email': email}]}, {}, function(err, users){
         if (err) {
             return next(err);
         }
@@ -122,12 +122,12 @@ function signup(req, res, next){
         }
 
         var avatar_url = User.makeGravatar(email);
-        User.newAndSave('', loginname, password, email, avatar_url, false, function (err){
+        User.newAndSave('', loginName, password, email, avatar_url, false, function (err){
             if (err) {
                 return next(err);
             }
 
-            mail.sendActiveMail(email, utility.md5(email + config.session_secret), loginname, email);
+            mail.sendActiveMail(email, utility.md5(email + config.session_secret), loginName, email);
             res.status(200);
             return res.send(flash(200, '欢迎加入 ' + config.name + '！我们已给您的注册邮箱发送了一封邮件，请点击里面的链接来激活您的帐号。', null));
         });
@@ -190,7 +190,7 @@ function updateSearchPass(req, res, next) {
                 return next(err);
             }
 
-            mail.sendResetPassMail(email, retrieveKey, user.loginname);
+            mail.sendResetPassMail(email, retrieveKey, user.loginName);
             return res.render('', {success: '我们已给您填写的电子邮箱发送了一封邮件，请在24小时内点击里面的链接来重置密码。'});
         });
     });
@@ -269,9 +269,9 @@ function checkEmail(req, res, next){
 
 
 function checkLoginname(req, res, next){
-    var loginname = validator.trim(req.body.loginname).toLowerCase();
+    var loginName = validator.trim(req.body.loginName).toLowerCase();
 
-    User.getUserByLoginName(loginname, function(err, user){
+    User.getUserByLoginName(loginName, function(err, user){
         if (err) {
             return next(err);
         }

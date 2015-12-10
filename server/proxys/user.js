@@ -8,11 +8,11 @@ exports.getUsersByNames = function (names, callback) {
     if (names.length === 0) {
         return callback(null, []);
     }
-    User.find({ loginname: { $in: names } }, callback);
+    User.find({ login_name: { $in: names } }, callback);
 };
 
-exports.getUserByLoginName = function (loginName, callback) {
-    User.findOne({'loginname': loginName}, callback);
+exports.getUserByLoginName = function (login_name, callback) {
+    User.findOne({'login_name': login_name}, callback);
 };
 
 exports.getUserById = function (id, callback) {
@@ -34,8 +34,8 @@ exports.getUsersByQuery = function (query, opt, callback) {
     User.find(query, '', opt, callback);
 };
 
-exports.getUserByNameAndKey = function (loginname, key, callback) {
-    User.findOne({loginname: loginname, retrieve_key: key}, callback);
+exports.getUserByNameAndKey = function (login_name, key, callback) {
+    User.findOne({login_name: login_name, retrieve_key: key}, callback);
 };
 
 exports.removeAsync = function(callback){
@@ -45,7 +45,7 @@ exports.removeAsync = function(callback){
 exports.registerAsync = function(email, pass){
     var user         = new User();
     user.name        = email;
-    user.loginname   = email;
+    user.login_name   = email;
     user.pass        = pass;
     user.email       = email;
     user.active      = true;
@@ -59,9 +59,9 @@ exports.registerAsync = function(email, pass){
     });
 };
 
-exports.newAndSave = function (name, loginname, pass, email, avatar_url, active, callback) {
+exports.newAndSave = function (name, login_name, pass, email, avatar_url, active, callback) {
     var user         = new User();
-    user.loginname   = loginname;
+    user.login_name   = login_name;
     user.pass        = pass;
     user.email       = email;
     user.avatar      = avatar_url;

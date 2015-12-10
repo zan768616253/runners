@@ -1,9 +1,7 @@
-<div class="modal fade" ng-controller="SignUpController as ctrl">
+<div class="modal fade">
     <div class="modal-dialog modal-lg modal-signin">
         <div class="modal-content">
             <div class="modal-header modal-signin-header">
-
-                <button type="button" class="close" ng-click="close()" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <a class="modal-signuplogo">
                     <img src="/assets/img/signup-s.png">
                 </a>
@@ -13,26 +11,41 @@
                 </div>
             </div>
             <div class="modal-body">
-                <form name="ctrl.signinForm" class="form-horizontal" role="form" novalidate>
+                <form name="signinForm" class="form-horizontal" role="form" novalidate>
                     <div class="form-group">
-                        <label for="emial" class="col-sm-3 control-label">登录名</label>
+                        <label for="emial" class="col-sm-3 control-label">登录名:</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="emial" placeholder="email或是昵称" ng-model="ctrl.emial"
-                             required ng-model-options="{ updateOn : 'default blur' }">
+                            <input type="text" class="form-control" id="emial" name="email" placeholder="email或是昵称" ng-model="emial"
+                                   required ng-model-options="{ updateOn : 'default blur' }">
                         </div>
+                        <span ng-messages="signinForm.email.$error">
+                            <div ng-message="required"><img src="/assets/img/error.gif"></div>
+                        </span>
                     </div>
                     <div class="form-group">
-                        <label for="password" class="col-sm-3 control-label">密码</label>
+                        <label for="password" class="col-sm-3 control-label">密码:</label>
                         <div class="col-sm-6">
-                            <input type="password" class="form-control" id="password" placeholder="密码" ng-model="ctrl.password"
-                             required ng-model-options="{ updateOn : 'default blur' }">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="密码" ng-model="password"
+                                   required ng-model-options="{ updateOn : 'default blur' }">
                         </div>
+                        <span ng-messages="signinForm.password.$error">
+                            <div ng-message="required"><img src="/assets/img/error.gif"></div>
+                        </span>
                     </div>
+                    <div id="modal-signin-rememberme-div">
+                        <div id="modal-signin-rememberme-checkbox" class="checkbox">
+                            <label><input type="checkbox">自动登陆</label>
+                        </div>
+                        <a href="" target="_blank">找回密码</a>
+                    </div>
+                    <div class="modal-footer modal-signin-footer">
+                        <div type="submit" ng-click="signin(signinForm.$valid)">
+                            <img ng-src="/assets/img/login_x.png">
+                        </div>
+                        <a href="" target="_blank" ng-click="cancel()" data-dismiss="modal">关闭</a>
+                    </div>
+                    <div class="check_echo">{{echo}}</div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" ng-click="ctrl.signin()" class="btn btn-primary" data-dismiss="modal">登陆</button>
-                <button type="button" ng-click="ctrl.cancel()" class="btn">取消</button>
             </div>
         </div>
     </div>

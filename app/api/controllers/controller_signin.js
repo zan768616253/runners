@@ -1,30 +1,59 @@
 (function(){
     app
-        .controller('SignInController', ['Auth', '$rootScope', '$element', 'title', 'close',
-            function(Auth, $rootScope, $element, title, close){
-                var ctrl = this;
+        .controller('SignInController', ['Auth', 'close', '$rootScope', '$scope', '$timeout', '$element',
+            function(Auth, close, $rootScope, $scope, $timeout, $element){
+                var echo = '';
 
-                ctrl.emial = null;
-                ctrl.password = null;
-
-                ctrl.close = function() {
-                    close({
-                        emial: ctrl.emial,
-                        password: ctrl.password
-                    }, 500);
+                var resetEchoMsg = function() {
+                    $timeout(function(){
+                        $scope.echo = '';
+                    }, 3000)
                 };
 
-                ctrl.cancel = function() {
+                var closeModal = function() {
                     $element.modal('hide');
-                    close({
-                        emial: ctrl.emial,
-                        password: ctrl.password
-                    }, 500);
+                    close(null, 500);
                 };
 
-                ctrl.signin = function() {
+                var cancel = function() {
+                    closeModal();
+                };
 
+                var signin = function(isValid) {
+                    if (isValid) {
+                        Auth.signin({
+                                email: $scope.emial,
+                                password: $scope.password
+                        }, function(res) {
+                            switch (res.status.code){
+                                case 200:
+                                    var token = res.data.token;
+                                    var user = res.data.user;
+                                    Auth.setAuth('Token', token);
+                                    Auth.setAuth('User', user);
+                                    $rootScope.$broadcast(Auth.loginStatus.Success);
+                                    closeModal();
+                                    break;
+                                default:
+                                    $scope.echo = '不行啊！今天服务器有问题';
+                                    break;
+                            };
+                        }, function(err) {
+
+                        })
+                    } else {
+                        $scope.echo = '不行啊！有错误哦！';
+                        resetEchoMsg();
+                    }
                 }
+
+                $scope.echo = echo;
+                $scope.emial = 's@qq.com';
+                $scope.password = 's';
+
+                $scope.signin = signin;
+                $scope.cancel = cancel;
+
             }]
         );
 })()

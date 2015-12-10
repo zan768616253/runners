@@ -9,7 +9,7 @@ var userRoles = require('../configs/config_router').userRoles;
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-    loginname: { type: String},
+    login_name: { type: String},
     pass: { type: String },
     email: { type: String},
     url: { type: String },
@@ -106,7 +106,7 @@ UserSchema.methods.comparePassword = function(candidatePassword, callback){
     //});
 }
 
-UserSchema.index({loginname: 1}, {unique: true});
+UserSchema.index({login_name: 1}, {unique: true});
 UserSchema.index({email: 1}, {unique: true});
 UserSchema.index({score: -1});
 UserSchema.index({accessToken: 1});

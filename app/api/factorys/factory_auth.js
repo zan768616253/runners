@@ -7,7 +7,8 @@
             function($http, $cookies, $q, ModalService){
                 var accessLevels = config_router.accessLevels,
                     userRoles = config_router.userRoles,
-                    currentUser = $cookies['user']  || { username: '', role: userRoles.public };
+                    loginStatus = config.loginStatus,
+                    currentUser = $cookies.getObject('User')  || { username: '', role: userRoles.public };
 
                 function changeUser(user) {
                     angular.extend(currentUser, user);
@@ -39,25 +40,40 @@
                         }
                         return user.role.title === userRoles.user.title || user.role.title === userRoles.admin.title;
                     },
+                    checkAuth: function (target) {
+                        if(!$cookies.getObject(target)) {
+                            return false;
+                        }
+                        return true;
+                    },
+                    setAuth: function(target, data) {
+                        $cookies.putObject(target,data);
+                    },
+                    getAuth: function(target) {
+                        return $cookies.getObject(target)
+                    },
+                    removeAuth: function(target) {
+                        $cookies.remove(target);
+                    },
                     register: function(user, success, error){
                         $http.post('/signup', user).success(function(res) {
                             changeUser(res);
                             success();
                         }).error(error);
                     },
-                    login: function(user, success, error) {
+                    signin: function(user, success, error) {
                         $http.post('/signin', user).success(function(res){
                             changeUser(res);
-                            success(user);
+                            success(res);
                         }).error(error);
                     },
-                    logout: function(success, error) {
-                        $http.post('/signout').success(function(){
+                    signout: function(success, error) {
+                        $http.post('/signout').success(function(res){
                             changeUser({
                                 username: '',
                                 role: userRoles.public
                             });
-                            success();
+                            success(res);
                         }).error(error);
                     },
                     checkEmail: function(email){
@@ -85,13 +101,13 @@
                         })
                         return deferred.promise;
                     },
-                    checkName: function(loginname){
+                    checkName: function(loginName){
                         var deferred = $q.defer();
                         var message = {
                             isExist: false,
                             message: ''
                         };
-                        $http.post('/checkloginname', {loginname: loginname}).success(function(res){
+                        $http.post('/checkloginname', {loginName: loginName}).success(function(res){
                             switch(res.status.code){
                                 case 200:
                                     message.isExist = false;
@@ -113,6 +129,7 @@
                     accessLevels: accessLevels,
                     userRoles: userRoles,
                     user: currentUser,
+                    loginStatus: loginStatus,
                     showSigninModal: showSigninModal
                 }
             }

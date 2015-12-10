@@ -5,15 +5,12 @@
     app
         .controller('BodyController', ['$rootScope',
             function ($rootScope){
-
-                $rootScope.totalHints = 0;
-                $rootScope.isSignin = false;
             }
         ])
         .controller('NavbarController', ['$scope','$rootScope','$window','Auth','HintFactory',
             function($scope, $rootScope, $window, Auth, HintFactory){
                 var isAuth = false;
-                $rootScope.isAuth = isAuth;
+                $scope.isAuth = isAuth;
 
                 var isNeedFoldCurrent,
                     isNeedFoldCache,
@@ -24,7 +21,7 @@
                 $scope.isFolded = isNeedFoldCache = isNeedFoldCurrent =  $window.document.documentElement.offsetWidth < minWindowSize ? true : false;
                 $scope.isTopheaderFolded = isNeedFoldTopheader = isNeedFoldTopheaderCache = $window.document.documentElement.offsetWidth < minWindowSize ? true : false;
 
-                $scope.signin = Auth.showSigninModal;
+                $scope.showSignin = Auth.showSigninModal;
 
                 $scope.toggleNavbar = function () {
                     if(isNeedFoldCurrent) {
@@ -32,7 +29,7 @@
                     }else{
                         $scope.isFolded = false;
                     }
-                }
+                };
 
                 $window.onresize = function() {
                     isNeedFoldCurrent = $window.document.documentElement.offsetWidth < 768 ? true : false
@@ -42,7 +39,16 @@
                         $scope.isTopheaderFolded = isNeedFoldTopheaderCache = isNeedFoldTopheader
                         $scope.$apply();
                     }
-                }
+                };
+
+                $rootScope.$on(Auth.loginStatus.Success, function(){
+                    $scope.isAuth = true;
+                    $scope.user = Auth.getAuth('User');
+                });
+
+                $rootScope.$on(Auth.loginStatus.Failed, function(){
+                    $scope.isAuth = false;
+                })
             }
         ])
 })()

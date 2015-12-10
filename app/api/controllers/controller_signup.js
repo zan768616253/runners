@@ -3,14 +3,14 @@
         .controller('SignUpController', ['Auth', 'ngFoobar', '$state', '$timeout',
             function(Auth, ngFoobar, $state, $timeout){
                 var ctrl = this;
-                var newUser = { email:'', loginName:'s', password:'s', passwordConfirmed:'s'};
+                var newUser = { email:'', login_name:'s', password:'s', passwordConfirmed:'s'};
 
                 var signup = function () {
                     if( ctrl.signupForm.$valid) {
                         ctrl.showSubmittedPrompt = true;
                         Auth.register({
                             email: ctrl.newUser.email,
-                            loginname: ctrl.newUser.loginName,
+                            loginName: ctrl.newUser.loginName,
                             password: ctrl.newUser.password,
                             re_password: ctrl.newUser.passwordConfirmed
                         }, function(){
